@@ -1,0 +1,278 @@
+/* Change these two if your navbar height / sidebar width differ */
+:root {
+  --navbar-height: 72px;
+  --settings-sidebar-width: 305px;
+}
+
+.settings-sidebar {
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+
+  width: var(--settings-sidebar-width);
+  height: calc(100vh - var(--navbar-height));
+  height: calc(100dvh - var(--navbar-height));
+  min-height: 0;
+
+  padding: 36px 20px 40px;
+
+  background: #ffffff;
+  border-right: 1px solid #e9e9f2;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  overflow-y: auto;
+
+  z-index: 80;
+}
+
+.settings-sidebar-title {
+  margin: 0 12px 28px;
+
+  font-size: 25px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.settings-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.settings-nav-item {
+  width: 100%;
+  height: 53px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #4b5563;
+  text-decoration: none;          /* <Link> renders an <a> */
+
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  text-align: left;
+}
+
+.settings-nav-item:hover {
+  background: #f7f4ff;
+  color: #5b2ee6;
+}
+
+.settings-nav-item.active {
+  background: #f0eaff;
+  color: #5b2ee6;
+}
+
+.settings-nav-icon {
+  flex-shrink: 0;
+  width: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 12px;
+
+  font-size: 20px;
+}
+
+.settings-nav-text {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* =========================
+   SELLING TIPS CARD
+========================= */
+
+.selling-tips-card {
+  position: relative;
+
+  min-height: 220px;
+
+  margin-top: auto;
+  padding: 24px 20px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #f5efff, #eee5ff);
+
+  overflow: hidden;
+}
+
+.selling-tips-content {
+  position: relative;
+  z-index: 2;
+}
+
+.selling-tips-content h3 {
+  margin: 0 0 22px;
+
+  font-size: 20px;
+  line-height: 1.4;
+
+  font-weight: 700;
+  color: #111827;
+}
+
+.explore-tips-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 17px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #6534e8, #5425d5);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.explore-tips-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(101, 52, 232, 0.25);
+}
+
+.selling-tips-illustration {
+  position: absolute;
+
+  right: 8px;
+  bottom: -5px;
+
+  font-size: 72px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Small laptops */
+@media (max-width: 1100px) {
+  :root { --settings-sidebar-width: 270px; }
+
+  .settings-sidebar { padding: 30px 16px 32px; }
+  .settings-sidebar-title { font-size: 23px; margin-bottom: 22px; }
+  .settings-nav-item { padding: 0 18px; }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  :root { --settings-sidebar-width: 240px; }
+
+  .settings-sidebar { padding: 26px 14px 28px; }
+  .settings-sidebar-title { font-size: 21px; }
+
+  .settings-nav-item {
+    height: 48px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .settings-nav-icon {
+    width: 24px;
+    margin-right: 10px;
+    font-size: 17px;
+  }
+
+  .selling-tips-card { padding: 20px 15px; min-height: 190px; }
+  .selling-tips-content h3 { font-size: 17px; margin-bottom: 16px; }
+  .selling-tips-illustration { font-size: 56px; }
+}
+
+/* Mobile: sidebar becomes a horizontal, scrollable tab bar */
+@media (max-width: 768px) {
+  .settings-sidebar {
+    position: static;
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    height: auto;
+
+    /* extra top space: mobile navbar is taller than the space reserved for it */
+    padding: 32px 14px 12px;
+
+    border-right: none;
+    border-bottom: 1px solid #e9e9f2;
+
+    overflow: visible;
+  }
+
+  .settings-sidebar-title {
+    margin: 0 4px 10px;
+    font-size: 20px;
+  }
+
+  .settings-navigation {
+    flex-direction: row;
+    gap: 8px;
+
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .settings-navigation::-webkit-scrollbar { display: none; }
+
+  .settings-nav-item {
+    flex: 0 0 auto;
+    width: auto;
+    height: 42px;
+
+    padding: 0 16px;
+
+    border-radius: 999px;
+    background: #f5f5fa;
+
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .settings-nav-item.active { background: #f0eaff; }
+
+  .settings-nav-icon {
+    width: auto;
+    margin-right: 8px;
+    font-size: 15px;
+  }
+
+  .settings-nav-text { flex: none; }
+
+  /* promo card doesn't fit a tab bar */
+  .selling-tips-card { display: none; }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .settings-sidebar { padding: 30px 10px 10px; }
+  .settings-nav-item { height: 40px; padding: 0 13px; font-size: 13px; }
+  .settings-nav-icon { margin-right: 6px; }
+}

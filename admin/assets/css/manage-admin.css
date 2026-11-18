@@ -1,0 +1,299 @@
+
+/* =====================================================
+   MANAGE ADMIN
+===================================================== */
+
+.manage-admin-summary {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 24px;
+    margin-bottom: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.manage-admin-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+    color: var(--primary);
+    font-size: 25px;
+}
+
+.manage-admin-summary h2 {
+    margin: 0 0 7px;
+    font-size: 21px;
+    color: var(--text);
+}
+
+.manage-admin-summary p {
+    margin: 0 0 12px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MANAGEMENT CARD
+===================================================== */
+
+.manage-admin-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.manage-admin-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.manage-admin-card-header > i {
+    color: var(--primary);
+    font-size: 18px;
+}
+
+.manage-admin-card-header h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 17px;
+}
+
+.manage-admin-description {
+    margin: 0 0 24px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ACTION FORMS
+===================================================== */
+
+.manage-admin-action-form {
+    padding: 22px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.manage-admin-action-form:last-child {
+    margin-bottom: 0;
+}
+
+.manage-admin-action-form h4 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.manage-admin-action-form p {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.manage-admin-action-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.manage-admin-action-form textarea {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    background: var(--background);
+    color: var(--text);
+    resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.manage-admin-action-form textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.manage-admin-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.manage-admin-button:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.96);
+}
+
+.manage-admin-button.suspend {
+    background: color-mix(in srgb, var(--warning) 12%, transparent);
+    color: var(--warning);
+}
+
+.manage-admin-button.ban {
+    background: color-mix(in srgb, var(--danger) 12%, transparent);
+    color: var(--danger);
+}
+
+.manage-admin-button.restore {
+    background: color-mix(in srgb, var(--success) 12%, transparent);
+    color: var(--success);
+}
+
+
+/* =====================================================
+   RESTRICTION HISTORY
+===================================================== */
+
+.manage-admin-history {
+    display: flex;
+    flex-direction: column;
+}
+
+.manage-admin-history-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.manage-admin-history-item:last-child {
+    border-bottom: none;
+}
+
+.history-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+    color: var(--primary);
+}
+
+.history-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.history-content strong {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.history-content p {
+    margin: 0 0 8px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.history-content small {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.manage-admin-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+}
+
+.manage-admin-empty i {
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+.manage-admin-empty p {
+    margin: 0;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 600px) {
+    .manage-admin-summary {
+        padding: 18px;
+    }
+
+    .manage-admin-card {
+        padding: 18px;
+    }
+
+    .manage-admin-action-form {
+        padding: 16px;
+    }
+
+    .manage-admin-button {
+        width: 100%;
+    }
+}
+
+
+.admin-action-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.admin-action-message.success {
+    background: color-mix(in srgb, var(--success) 12%, transparent);
+    color: var(--success);
+    border: 1px solid color-mix(in srgb, var(--success) 30%, transparent);
+}
+
+.admin-action-message.error {
+    background: color-mix(in srgb, var(--danger) 12%, transparent);
+    color: var(--danger);
+    border: 1px solid color-mix(in srgb, var(--danger) 30%, transparent);
+}

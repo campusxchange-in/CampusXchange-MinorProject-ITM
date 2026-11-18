@@ -1,0 +1,1279 @@
+/* =========================================================
+   USERS PAGE
+   CampusXchange Admin Panel
+   Theme-aware: Light / Dark
+========================================================= */
+
+
+/* =========================================================
+   USERS STATISTICS
+========================================================= */
+
+.users-stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.user-stat-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.user-stat-icon {
+
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(37, 99, 235, 0.10);
+
+    color: var(--primary);
+
+    font-size: 16px;
+}
+
+
+.user-stat-card span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+.user-stat-card strong {
+
+    display: block;
+
+    color: var(--text);
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   STAT CARD VARIATIONS
+========================================================= */
+
+.user-stat-card.stat-success .user-stat-icon {
+
+    background: rgba(22, 163, 74, 0.10);
+
+    color: var(--success);
+}
+
+
+.user-stat-card.stat-warning .user-stat-icon {
+
+    background: rgba(245, 158, 11, 0.10);
+
+    color: var(--warning);
+}
+
+
+.user-stat-card.stat-danger .user-stat-icon {
+
+    background: rgba(239, 68, 68, 0.10);
+
+    color: var(--danger);
+}
+
+
+.user-stat-card.stat-info .user-stat-icon {
+
+    background: rgba(37, 99, 235, 0.10);
+
+    color: var(--info);
+}
+
+
+/* =========================================================
+   MAIN USERS CARD
+========================================================= */
+
+.users-card {
+
+    width: 100%;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   FILTER TOOLBAR
+========================================================= */
+
+.users-toolbar {
+
+    padding: 18px;
+
+    border-bottom: 1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+.users-filter-form {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.users-search {
+
+    position: relative;
+
+    flex: 1 1 280px;
+
+    min-width: 220px;
+}
+
+
+.users-search i {
+
+    position: absolute;
+
+    left: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+
+.users-search input {
+
+    width: 100%;
+
+    height: 40px;
+
+    padding:
+        0
+        14px
+        0
+        38px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: var(--font-family);
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.users-search input::placeholder {
+
+    color: var(--text-muted);
+}
+
+
+.users-search input:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   FILTER SELECT
+========================================================= */
+
+.users-filter {
+
+    flex: 0 0 auto;
+}
+
+
+.users-filter select {
+
+    height: 40px;
+
+    min-width: 145px;
+
+    padding:
+        0
+        32px
+        0
+        12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: var(--font-family);
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.users-filter select:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.10);
+}
+
+
+.users-filter select option {
+
+    background: var(--surface);
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
+
+.users-filter-form .btn-primary,
+.users-filter-form .btn-secondary {
+
+    height: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 14px;
+
+    border-radius: 8px;
+
+    font-family: var(--font-family);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* Primary */
+
+.users-filter-form .btn-primary {
+
+    border: 1px solid var(--button);
+
+    background: var(--button);
+
+    color: var(--button-text);
+}
+
+
+.users-filter-form .btn-primary:hover {
+
+    opacity: 0.9;
+}
+
+
+/* Secondary */
+
+.users-filter-form .btn-secondary {
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+
+    color: var(--text-muted);
+}
+
+
+.users-filter-form .btn-secondary:hover {
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+    background: var(--background);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.users-table-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    background: var(--surface);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.users-table-header h3 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.users-table-header p {
+
+    margin-top: 4px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.users-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   USERS TABLE
+========================================================= */
+
+.users-table {
+
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+}
+
+
+.users-table thead {
+
+    background: var(--background);
+}
+
+
+.users-table th {
+
+    padding: 12px 20px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    text-align: left;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+
+    white-space: nowrap;
+}
+
+
+.users-table td {
+
+    padding: 14px 20px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text);
+
+    vertical-align: middle;
+
+    font-size: 13px;
+}
+
+
+.users-table tbody tr {
+
+    transition:
+        background-color 0.15s ease;
+}
+
+
+.users-table tbody tr:hover {
+
+    background: var(--background);
+}
+
+
+.users-table tbody tr:last-child td {
+
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   USER PROFILE CELL
+========================================================= */
+
+.user-table-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 230px;
+}
+
+
+.user-avatar,
+.user-avatar-placeholder {
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+
+.user-avatar {
+
+    display: block;
+
+    object-fit: cover;
+
+    border: 1px solid var(--border);
+
+    background: var(--background);
+}
+
+
+.user-avatar-placeholder {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(37, 99, 235, 0.10);
+
+    color: var(--primary);
+
+    border: 1px solid var(--border);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.user-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+.user-info strong {
+
+    display: block;
+
+    max-width: 210px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.user-info span {
+
+    display: block;
+
+    max-width: 210px;
+
+    margin-top: 3px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   COMMON BADGES
+========================================================= */
+
+.role-badge,
+.verification-badge,
+.status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ROLE BADGES
+========================================================= */
+
+.role-student {
+
+    background: rgba(37, 99, 235, 0.10);
+
+    color: var(--primary);
+}
+
+
+.role-faculty {
+
+    background: rgba(139, 92, 246, 0.12);
+
+    color: #8b5cf6;
+}
+
+
+.role-pending {
+
+    background: var(--background);
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   VERIFICATION BADGES
+========================================================= */
+
+.verification-approved {
+
+    background: rgba(22, 163, 74, 0.10);
+
+    color: var(--success);
+}
+
+
+.verification-pending {
+
+    background: rgba(245, 158, 11, 0.12);
+
+    color: var(--warning);
+}
+
+
+.verification-rejected {
+
+    background: rgba(239, 68, 68, 0.10);
+
+    color: var(--danger);
+}
+
+
+.verification-none {
+
+    background: var(--background);
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.status-badge i {
+
+    font-size: 6px;
+}
+
+
+.status-active {
+
+    background: rgba(22, 163, 74, 0.10);
+
+    color: var(--success);
+}
+
+
+.status-pending {
+
+    background: rgba(245, 158, 11, 0.12);
+
+    color: var(--warning);
+}
+
+
+.status-suspended {
+
+    background: rgba(245, 158, 11, 0.12);
+
+    color: var(--warning);
+}
+
+
+.status-banned {
+
+    background: rgba(239, 68, 68, 0.10);
+
+    color: var(--danger);
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.user-date {
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.user-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.user-action-btn {
+
+    width: 32px;
+    height: 32px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: var(--surface);
+
+    color: var(--text-muted);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.user-action-btn:hover {
+
+    background: var(--background);
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.users-empty-state {
+
+    height: 260px;
+
+    text-align: center;
+}
+
+
+.users-empty-state > div {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.users-empty-state i {
+
+    margin-bottom: 12px;
+
+    color: var(--text-muted);
+
+    font-size: 30px;
+
+    opacity: 0.6;
+}
+
+
+.users-empty-state h3 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.users-empty-state p {
+
+    margin-top: 5px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.users-pagination {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 20px;
+
+    border-top: 1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+.pagination-pages {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    flex: 1;
+}
+
+
+.pagination-btn,
+.pagination-page {
+
+    width: 32px;
+    height: 32px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: var(--surface);
+
+    color: var(--text-muted);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.pagination-btn:hover,
+.pagination-page:hover {
+
+    border-color: var(--primary);
+
+    background: var(--background);
+
+    color: var(--primary);
+}
+
+
+.pagination-page.active {
+
+    border-color: var(--primary);
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+
+.pagination-btn.disabled {
+
+    opacity: 0.4;
+
+    pointer-events: none;
+
+    cursor: default;
+}
+
+
+.pagination-dots {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DARK MODE ADJUSTMENTS
+========================================================= */
+
+body.dark-mode .user-stat-icon {
+
+    background: rgba(139, 92, 246, 0.14);
+}
+
+
+body.dark-mode .user-stat-card.stat-success .user-stat-icon {
+
+    background: rgba(34, 197, 94, 0.14);
+}
+
+
+body.dark-mode .user-stat-card.stat-warning .user-stat-icon {
+
+    background: rgba(251, 191, 36, 0.14);
+}
+
+
+body.dark-mode .user-stat-card.stat-danger .user-stat-icon {
+
+    background: rgba(239, 68, 68, 0.14);
+}
+
+
+body.dark-mode .user-stat-card.stat-info .user-stat-icon {
+
+    background: rgba(96, 165, 250, 0.14);
+}
+
+
+body.dark-mode .role-student {
+
+    background: rgba(139, 92, 246, 0.14);
+
+    color: var(--primary);
+}
+
+
+body.dark-mode .role-faculty {
+
+    background: rgba(167, 139, 250, 0.14);
+
+    color: #c4b5fd;
+}
+
+
+body.dark-mode .verification-approved,
+body.dark-mode .status-active {
+
+    background: rgba(34, 197, 94, 0.14);
+}
+
+
+body.dark-mode .verification-pending,
+body.dark-mode .status-pending,
+body.dark-mode .status-suspended {
+
+    background: rgba(251, 191, 36, 0.14);
+}
+
+
+body.dark-mode .verification-rejected,
+body.dark-mode .status-banned {
+
+    background: rgba(239, 68, 68, 0.14);
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .users-stats-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .users-stats-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .users-search {
+
+        flex: 1 1 100%;
+    }
+
+
+    .users-filter {
+
+        flex: 1 1 calc(33.333% - 10px);
+    }
+
+
+    .users-filter select {
+
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .users-stats-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .user-stat-card {
+
+        padding: 13px;
+
+        gap: 10px;
+    }
+
+
+    .user-stat-icon {
+
+        width: 36px;
+        height: 36px;
+
+        border-radius: 8px;
+
+        font-size: 14px;
+    }
+
+
+    .user-stat-card span {
+
+        font-size: 10px;
+    }
+
+
+    .user-stat-card strong {
+
+        font-size: 17px;
+    }
+
+
+    .users-toolbar {
+
+        padding: 13px;
+    }
+
+
+    .users-filter {
+
+        flex: 1 1 100%;
+    }
+
+
+    .users-filter-form .btn-primary,
+    .users-filter-form .btn-secondary {
+
+        flex: 1;
+    }
+
+
+    .users-table-header {
+
+        padding: 15px;
+    }
+
+
+    .users-pagination {
+
+        padding: 13px 15px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - VERY SMALL
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .users-stats-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =====================================================
+   USER REPORT STATUS
+===================================================== */
+
+.user-report-link,
+.user-report-none {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.user-report-link {
+    color: var(--danger);
+    text-decoration: none;
+}
+
+.user-report-link:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+.user-report-none {
+    color: var(--text-muted);
+}
+
+.user-report-none i {
+    color: var(--success);
+}

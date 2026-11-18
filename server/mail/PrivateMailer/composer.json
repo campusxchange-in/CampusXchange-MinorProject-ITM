@@ -1,0 +1,31 @@
+{
+    "name": "rnick007/privatemailer",
+    "description": "Reusable private PHP mailer using PHPMailer",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "mailer",
+        "email",
+        "phpmailer",
+        "smtp",
+        "otp",
+        "password-reset",
+        "composer"
+    ],
+    "authors": [
+        {
+            "name": "Nikhil Raykwar",
+            "email": "nikhilraykwar@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PrivateMailer\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^7.1"
+    }
+}

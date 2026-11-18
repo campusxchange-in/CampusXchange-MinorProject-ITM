@@ -1,0 +1,1200 @@
+/* =====================================================
+   PRODUCT DETAILS LAYOUT
+===================================================== */
+
+.product-details-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        340px;
+
+    gap: 24px;
+
+    align-items: start;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.product-details-main {
+
+    min-width: 0;
+
+}
+
+
+/* =====================================================
+   PRODUCT HEADER
+===================================================== */
+
+.product-details-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.product-id {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.product-details-header h2 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+}
+
+
+.product-details-header p {
+
+    margin: 7px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   PRODUCT SECTIONS
+===================================================== */
+
+.product-section {
+
+    margin-bottom: 20px;
+
+    padding: 24px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-heading h3 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 17px;
+
+}
+
+
+.section-heading p {
+
+    margin: 5px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   IMAGES
+===================================================== */
+
+.product-images {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 14px;
+
+}
+
+
+.product-image-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio: 1 / 1;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--background);
+
+}
+
+
+.product-image-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+.primary-image-label {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: var(--primary);
+
+    color: var(--button-text);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   DETAILS GRID
+===================================================== */
+
+.details-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+}
+
+
+.detail-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.detail-label {
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.detail-item strong {
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.description-block {
+
+    margin-top: 22px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.description-block p {
+
+    margin: 8px 0 0;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    white-space: normal;
+
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.details-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--link);
+
+    text-decoration: none;
+
+}
+
+
+.details-link:hover {
+
+    color: var(--link-hover);
+
+}
+
+
+.details-card-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+    padding: 10px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    color: var(--link);
+
+    background: var(--surface);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.details-card-link:hover {
+
+    border-color: var(--primary);
+
+    background: var(--background);
+
+    color: var(--link-hover);
+
+}
+
+
+/* =====================================================
+   SIDEBAR CARDS
+===================================================== */
+
+.product-details-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.details-card {
+
+    padding: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.details-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.details-card-header h3 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   SELLER
+===================================================== */
+
+.seller-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.seller-avatar {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: var(--button-text);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+}
+
+
+.seller-profile strong {
+
+    display: block;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+}
+
+
+.seller-profile span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    word-break: break-word;
+
+}
+
+
+.seller-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.seller-details > div {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+
+.seller-details span {
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+}
+
+
+.seller-details strong {
+
+    color: var(--text);
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================================
+   REPORT SUMMARY
+===================================================== */
+
+.report-total {
+
+    min-width: 28px;
+
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.report-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.report-summary > div {
+
+    padding: 11px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+}
+
+
+.report-summary span {
+
+    display: block;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+}
+
+
+.report-summary strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.product-timeline {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.timeline-item {
+
+    display: flex;
+
+    gap: 12px;
+
+    padding-bottom: 18px;
+
+}
+
+
+.timeline-item:last-child {
+
+    padding-bottom: 0;
+
+}
+
+
+.timeline-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: var(--background);
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+}
+
+
+.timeline-item strong {
+
+    display: block;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+}
+
+
+.timeline-item span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================================
+   REMOVAL
+===================================================== */
+
+.removal-section {
+
+    border-color: color-mix(
+        in srgb,
+        var(--danger) 35%,
+        var(--border)
+    );
+
+}
+
+
+.removal-section .section-heading h3 {
+
+    color: var(--danger);
+
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.details-empty {
+
+    min-height: 130px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    color: var(--text-muted);
+
+    border: 1px dashed var(--border);
+
+    border-radius: 10px;
+
+    background: var(--background);
+
+}
+
+
+.details-empty i {
+
+    font-size: 22px;
+
+}
+
+
+/* =====================================================
+   REPORTS
+===================================================== */
+
+.product-reports-card {
+
+    margin-top: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+}
+
+
+.product-reports-card .products-card-header {
+
+    padding: 20px 22px;
+
+}
+
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.status-pending {
+
+    background: color-mix(
+        in srgb,
+        var(--warning) 12%,
+        transparent
+    );
+
+    color: var(--warning);
+
+}
+
+
+.status-review {
+
+    background: color-mix(
+        in srgb,
+        var(--info) 12%,
+        transparent
+    );
+
+    color: var(--info);
+
+}
+
+
+.status-resolved {
+
+    background: color-mix(
+        in srgb,
+        var(--success) 12%,
+        transparent
+    );
+
+    color: var(--success);
+
+}
+
+
+.status-rejected {
+
+    background: color-mix(
+        in srgb,
+        var(--danger) 10%,
+        transparent
+    );
+
+    color: var(--danger);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .product-details-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .product-details-sidebar {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .product-details-sidebar {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .product-details-header {
+
+        flex-direction: column;
+
+    }
+
+
+    .details-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .product-images {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .product-images {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* =====================================================
+   REPORTS TABLE
+===================================================== */
+
+.table-responsive {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+}
+
+
+/* =====================================================
+   ADMIN TABLE
+===================================================== */
+
+.admin-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+}
+
+
+.admin-table thead {
+
+    background: var(--background);
+
+}
+
+
+.admin-table th {
+
+    padding: 13px 16px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+
+    white-space: nowrap;
+
+}
+
+
+.admin-table td {
+
+    padding: 15px 16px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text);
+
+    vertical-align: middle;
+
+}
+
+
+.admin-table tbody tr {
+
+    transition: background 0.15s ease;
+
+}
+
+
+.admin-table tbody tr:hover {
+
+    background: var(--background);
+
+}
+
+
+.admin-table tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+/* =====================================================
+   REPORTER / SELLER CELL
+===================================================== */
+
+.seller-cell {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 160px;
+
+}
+
+
+.seller-cell strong {
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.seller-cell span {
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    word-break: break-word;
+
+}
+
+
+/* =====================================================
+   STATUS BADGE
+===================================================== */
+
+.status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+}
+
+
+.status-pending {
+
+    background: color-mix(
+        in srgb,
+        var(--warning) 12%,
+        transparent
+    );
+
+    color: var(--warning);
+
+}
+
+
+.status-review {
+
+    background: color-mix(
+        in srgb,
+        var(--info) 12%,
+        transparent
+    );
+
+    color: var(--info);
+
+}
+
+
+.status-resolved {
+
+    background: color-mix(
+        in srgb,
+        var(--success) 12%,
+        transparent
+    );
+
+    color: var(--success);
+
+}
+
+
+.status-rejected {
+
+    background: color-mix(
+        in srgb,
+        var(--danger) 10%,
+        transparent
+    );
+
+    color: var(--danger);
+
+}
+
+
+/* =====================================================
+   TABLE ACTION
+===================================================== */
+
+.table-action-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: var(--surface);
+
+    color: var(--link);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.table-action-btn:hover {
+
+    background: var(--background);
+
+    border-color: var(--primary);
+
+    color: var(--link-hover);
+
+}
+
+
+.table-action-btn i {
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .admin-table {
+
+        min-width: 850px;
+
+    }
+
+}

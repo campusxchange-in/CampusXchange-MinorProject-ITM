@@ -1,0 +1,1655 @@
+/* =====================================================
+   CAMPUSXCHANGE
+   DELETED USERS PAGE
+===================================================== */
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.deleted-users-page-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.deleted-users-breadcrumb {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+}
+
+
+.deleted-users-breadcrumb a {
+
+    color: var(--link);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+.deleted-users-breadcrumb a:hover {
+
+    color: var(--link-hover);
+
+    text-decoration: underline;
+
+}
+
+
+.deleted-users-page-header h1 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 26px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.025em;
+
+}
+
+
+.deleted-users-page-header p {
+
+    margin: 7px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+}
+
+
+.deleted-back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.deleted-back-btn:hover {
+
+    background: var(--background);
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.deleted-message {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-height: 48px;
+
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.deleted-message-icon {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 26px;
+
+    width: 26px;
+
+    height: 26px;
+
+    border-radius: 50%;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+
+.deleted-message-success {
+
+    border-color: color-mix(
+        in srgb,
+        var(--success) 30%,
+        var(--border)
+    );
+
+}
+
+
+.deleted-message-success .deleted-message-icon {
+
+    background: color-mix(
+        in srgb,
+        var(--success) 12%,
+        var(--surface)
+    );
+
+    color: var(--success);
+
+}
+
+
+.deleted-message-error {
+
+    border-color: color-mix(
+        in srgb,
+        var(--danger) 30%,
+        var(--border)
+    );
+
+}
+
+
+.deleted-message-error .deleted-message-icon {
+
+    background: color-mix(
+        in srgb,
+        var(--danger) 12%,
+        var(--surface)
+    );
+
+    color: var(--danger);
+
+}
+
+
+.deleted-message-info {
+
+    border-color: color-mix(
+        in srgb,
+        var(--info) 30%,
+        var(--border)
+    );
+
+}
+
+
+.deleted-message-info .deleted-message-icon {
+
+    background: color-mix(
+        in srgb,
+        var(--info) 12%,
+        var(--surface)
+    );
+
+    color: var(--info);
+
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.deleted-users-card {
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.deleted-users-toolbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.deleted-users-count {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    white-space: nowrap;
+
+}
+
+
+.deleted-users-count strong {
+
+    color: var(--text);
+
+    font-size: 20px;
+
+    font-weight: 750;
+
+}
+
+
+.deleted-users-count span {
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.deleted-search-form {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: min(100%, 480px);
+
+}
+
+
+.deleted-search-box {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    flex: 1;
+
+}
+
+
+.deleted-search-icon {
+
+    position: absolute;
+
+    left: 12px;
+
+    color: var(--text-muted);
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+}
+
+
+.deleted-search-box input {
+
+    width: 100%;
+
+    height: 40px;
+
+    padding: 0 38px 0 36px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.deleted-search-box input::placeholder {
+
+    color: var(--text-muted);
+
+}
+
+
+.deleted-search-box input:focus {
+
+    border-color: var(--primary);
+
+    background: var(--surface);
+
+    box-shadow:
+        0 0 0 3px color-mix(
+            in srgb,
+            var(--primary) 14%,
+            transparent
+        );
+
+}
+
+
+.deleted-search-clear {
+
+    position: absolute;
+
+    right: 10px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    color: var(--text-muted);
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+}
+
+
+.deleted-search-clear:hover {
+
+    background: var(--border);
+
+    color: var(--text);
+
+}
+
+
+.deleted-search-btn {
+
+    flex: 0 0 auto;
+
+    height: 40px;
+
+    padding: 0 16px;
+
+    border: 1px solid var(--button);
+
+    border-radius: 9px;
+
+    background: var(--button);
+
+    color: var(--button-text);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.deleted-search-btn:hover {
+
+    opacity: 0.92;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.deleted-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+.deleted-users-table {
+
+    width: 100%;
+
+    min-width: 850px;
+
+    border-collapse: collapse;
+
+}
+
+
+.deleted-users-table thead {
+
+    background: var(--background);
+
+}
+
+
+.deleted-users-table th {
+
+    padding: 13px 18px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    text-align: left;
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    letter-spacing: 0.055em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+}
+
+
+.deleted-users-table td {
+
+    padding: 16px 18px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text);
+
+    vertical-align: middle;
+
+}
+
+
+.deleted-users-table tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+.deleted-users-table tbody tr {
+
+    transition:
+        background 0.18s ease;
+
+}
+
+
+.deleted-users-table tbody tr:hover {
+
+    background: color-mix(
+        in srgb,
+        var(--background) 70%,
+        var(--surface)
+    );
+
+}
+
+
+/* =====================================================
+   USER CELL
+===================================================== */
+
+.deleted-user-cell {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 250px;
+
+}
+
+
+.deleted-user-avatar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 42px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: var(--background);
+
+    color: var(--text-muted);
+
+    font-size: 15px;
+
+    font-weight: 750;
+
+}
+
+
+.deleted-user-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    gap: 2px;
+
+}
+
+
+.deleted-user-info strong {
+
+    overflow: hidden;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+.deleted-user-info span {
+
+    overflow: hidden;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+.deleted-user-info small {
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================================
+   ROLE
+===================================================== */
+
+.deleted-role {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 27px;
+
+    padding: 0 9px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: var(--background);
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   DELETED STATUS
+===================================================== */
+
+.deleted-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 27px;
+
+    padding: 0 9px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.deleted-status-pending {
+
+    background: color-mix(
+        in srgb,
+        var(--warning) 12%,
+        var(--surface)
+    );
+
+    color: var(--warning);
+
+}
+
+
+.deleted-status-active {
+
+    background: color-mix(
+        in srgb,
+        var(--success) 12%,
+        var(--surface)
+    );
+
+    color: var(--success);
+
+}
+
+
+.deleted-status-suspended {
+
+    background: color-mix(
+        in srgb,
+        var(--warning) 12%,
+        var(--surface)
+    );
+
+    color: var(--warning);
+
+}
+
+
+.deleted-status-banned {
+
+    background: color-mix(
+        in srgb,
+        var(--danger) 12%,
+        var(--surface)
+    );
+
+    color: var(--danger);
+
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.deleted-date {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+
+.deleted-date strong {
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+}
+
+
+.deleted-date span {
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================================
+   RESTORE BUTTON
+===================================================== */
+
+.deleted-restore-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 35px;
+
+    padding: 0 12px;
+
+    border: 1px solid color-mix(
+        in srgb,
+        var(--success) 35%,
+        var(--border)
+    );
+
+    border-radius: 8px;
+
+    background: color-mix(
+        in srgb,
+        var(--success) 8%,
+        var(--surface)
+    );
+
+    color: var(--success);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.deleted-restore-btn:hover {
+
+    border-color: var(--success);
+
+    background: color-mix(
+        in srgb,
+        var(--success) 15%,
+        var(--surface)
+    );
+
+    transform: translateY(-1px);
+
+}
+
+
+.deleted-restore-btn:focus-visible {
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px color-mix(
+            in srgb,
+            var(--success) 18%,
+            transparent
+        );
+
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.deleted-empty {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 340px;
+
+    padding: 50px 25px;
+
+    text-align: center;
+
+}
+
+
+.deleted-empty-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 58px;
+
+    height: 58px;
+
+    margin-bottom: 17px;
+
+    border: 1px solid color-mix(
+        in srgb,
+        var(--success) 25%,
+        var(--border)
+    );
+
+    border-radius: 50%;
+
+    background: color-mix(
+        in srgb,
+        var(--success) 10%,
+        var(--surface)
+    );
+
+    color: var(--success);
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+.deleted-empty h2 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 18px;
+
+    font-weight: 750;
+
+}
+
+
+.deleted-empty p {
+
+    max-width: 450px;
+
+    margin: 8px 0 20px;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.deleted-empty-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 38px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.deleted-empty-btn:hover {
+
+    border-color: var(--primary);
+
+    background: var(--background);
+
+    color: var(--primary);
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.deleted-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+
+}
+
+
+.deleted-modal.show {
+
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.deleted-modal-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.58);
+
+    backdrop-filter: blur(3px);
+
+}
+
+
+body.dark-mode .deleted-modal-overlay {
+
+    background: rgba(0, 0, 0, 0.68);
+
+}
+
+
+.deleted-modal-box {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: min(100%, 500px);
+
+    max-height: calc(100vh - 40px);
+
+    overflow-y: auto;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: var(--surface);
+
+    box-shadow:
+        0 20px 60px rgba(15, 23, 42, 0.20);
+
+    transform: translateY(10px) scale(0.98);
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+
+body.dark-mode .deleted-modal-box {
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.50);
+
+}
+
+
+.deleted-modal.show .deleted-modal-box {
+
+    transform: translateY(0) scale(1);
+
+}
+
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.deleted-modal-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    padding: 21px 22px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.deleted-modal-header h2 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 18px;
+
+    font-weight: 750;
+
+}
+
+
+.deleted-modal-header p {
+
+    margin: 5px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.deleted-modal-close {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 32px;
+
+    width: 32px;
+
+    height: 32px;
+
+    margin-top: -4px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--surface);
+
+    color: var(--text-muted);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+
+}
+
+
+.deleted-modal-close:hover {
+
+    border-color: var(--danger);
+
+    background: color-mix(
+        in srgb,
+        var(--danger) 8%,
+        var(--surface)
+    );
+
+    color: var(--danger);
+
+}
+
+
+/* =====================================================
+   RESTORE CONFIRMATION
+===================================================== */
+
+.restore-confirmation {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 22px;
+
+}
+
+
+.restore-confirmation-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 46px;
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: color-mix(
+        in srgb,
+        var(--success) 12%,
+        var(--surface)
+    );
+
+    color: var(--success);
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+.restore-confirmation h3 {
+
+    margin: 2px 0 6px;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    font-weight: 750;
+
+}
+
+
+.restore-confirmation p {
+
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+}
+
+
+.restore-confirmation p strong {
+
+    color: var(--text);
+
+}
+
+
+/* =====================================================
+   RESTORE INFO
+===================================================== */
+
+.restore-info-box {
+
+    margin: 0 22px 20px;
+
+    padding: 14px 15px;
+
+    border: 1px solid color-mix(
+        in srgb,
+        var(--info) 25%,
+        var(--border)
+    );
+
+    border-radius: 9px;
+
+    background: color-mix(
+        in srgb,
+        var(--info) 6%,
+        var(--surface)
+    );
+
+}
+
+
+.restore-info-box > strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+}
+
+
+.restore-info-box ul {
+
+    margin: 0;
+
+    padding-left: 18px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+}
+
+
+.restore-info-box li + li {
+
+    margin-top: 3px;
+
+}
+
+
+.restore-info-box li strong {
+
+    color: var(--text);
+
+}
+
+
+/* =====================================================
+   MODAL ACTIONS
+===================================================== */
+
+.deleted-modal-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    padding: 16px 22px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.deleted-cancel-btn,
+.deleted-confirm-restore-btn {
+
+    min-height: 38px;
+
+    padding: 0 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.deleted-cancel-btn {
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+
+    color: var(--text);
+
+}
+
+
+.deleted-cancel-btn:hover {
+
+    background: var(--background);
+
+    border-color: var(--text-muted);
+
+}
+
+
+.deleted-confirm-restore-btn {
+
+    border: 1px solid var(--success);
+
+    background: var(--success);
+
+    color: #ffffff;
+
+}
+
+
+.deleted-confirm-restore-btn:hover {
+
+    opacity: 0.92;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+.deleted-cancel-btn:focus-visible,
+.deleted-confirm-restore-btn:focus-visible,
+.deleted-modal-close:focus-visible {
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px color-mix(
+            in srgb,
+            var(--primary) 18%,
+            transparent
+        );
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .deleted-users-page-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 14px;
+
+    }
+
+
+    .deleted-back-btn {
+
+        width: 100%;
+
+    }
+
+
+    .deleted-users-toolbar {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+
+    .deleted-search-form {
+
+        width: 100%;
+
+    }
+
+
+    .deleted-users-table {
+
+        min-width: 800px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .deleted-users-page-header h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .deleted-users-page-header p {
+
+        font-size: 12px;
+
+    }
+
+
+    .deleted-users-toolbar {
+
+        padding: 15px;
+
+    }
+
+
+    .deleted-search-form {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .deleted-search-btn {
+
+        width: 100%;
+
+    }
+
+
+    .deleted-modal {
+
+        align-items: flex-end;
+
+        padding: 0;
+
+    }
+
+
+    .deleted-modal-box {
+
+        width: 100%;
+
+        max-height: 90vh;
+
+        border-radius: 16px 16px 0 0;
+
+    }
+
+
+    .deleted-modal-actions {
+
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+
+    }
+
+
+    .deleted-cancel-btn,
+    .deleted-confirm-restore-btn {
+
+        width: 100%;
+
+    }
+
+}

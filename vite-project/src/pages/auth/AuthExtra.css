@@ -1,0 +1,35 @@
+.auth-message-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  padding: 24px;
+}
+.auth-message-card {
+  max-width: 520px;
+  width: 100%;
+}
+.auth-message-card .auth-input-box {
+  margin-bottom: 14px;
+}
+.auth-message-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 16px 0;
+}
+.auth-form-error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+.auth-route-loading {
+  min-height: 40vh;
+  display: grid;
+  place-items: center;
+  font: 500 16px Poppins, sans-serif;
+}
