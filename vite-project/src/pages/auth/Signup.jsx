@@ -210,7 +210,7 @@ export default function Signup() {
                 ref={refs.email}
                 name="email"
                 type="email"
-                placeholder="College Email"
+                placeholder="Email"
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}

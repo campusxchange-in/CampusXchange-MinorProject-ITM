@@ -34,6 +34,9 @@ import {
 } from "../services/userMarketService";
 import ElectronicsVerification from "./components/ElectronicsVerification";
 
+// Bill + original box are asked only for these product types (and only if the category has invoice_required on)
+const INVOICE_PRODUCT_TYPES = ["Mobile", "Laptop", "Tablet", "Smartwatch", "Headphones"];
+
 const SellItem = () => {
   const navigate = useNavigate();
 
@@ -78,7 +81,18 @@ const [boxImage, setBoxImage] = useState(null);
     setFormData((prev) => ({
       ...prev,
       [name]: value,
+      // changing category clears the category-specific fields
+      ...(name === "category" ? { productType: "" } : {}),
     }));
+
+    if (name === "category") {
+      setBillFile(null);
+      setBoxImage(null);
+    }
+    if (name === "productType" && !INVOICE_PRODUCT_TYPES.includes(value)) {
+      setBillFile(null);
+      setBoxImage(null);
+    }
   };
 
 
@@ -152,6 +166,10 @@ const handleBoxImageChange = (e) => {
     (c) => String(c.category_id) === String(formData.category)
   );
 
+  const needsDocs =
+    Boolean(selectedCategory?.invoice_required) &&
+    INVOICE_PRODUCT_TYPES.includes(formData.productType);
+
   const sendListing = async (mode) => {
     if (submitting) return;
     setFormError("");
@@ -173,8 +191,13 @@ const handleBoxImageChange = (e) => {
         return;
       }
 
-      if (selectedCategory?.invoice_required && !billFile) {
+      if (needsDocs && !billFile) {
         setFormError("This category requires your purchase bill / invoice.");
+        return;
+      }
+
+      if (needsDocs && !boxImage) {
+        setFormError("This category requires a photo of the original product box.");
         return;
       }
     } else if (!formData.name.trim()) {
@@ -190,7 +213,9 @@ const handleBoxImageChange = (e) => {
     body.append("condition", formData.condition);
     body.append("category_id", formData.category);
     images.forEach((image) => body.append("images[]", image.file));
-    if (billFile) body.append("invoice", billFile);
+    if (formData.productType) body.append("product_type", formData.productType);
+    if (needsDocs && billFile) body.append("invoice", billFile);
+    if (needsDocs && boxImage) body.append("product_box", boxImage);
 
     setSubmitting(true);
 
@@ -611,8 +636,7 @@ const handleBoxImageChange = (e) => {
                 {/* Electronics Verification */}
 
                                 {selectedCategory && /electronic/i.test(selectedCategory.category_name) && (
-                                        <>
-                                          <div className="field">
+                  <div className="field">
                                             <label>
                                               Product Type <b>*</b>
                                             </label>
@@ -668,17 +692,17 @@ const handleBoxImageChange = (e) => {
                                               </option>
                                             </select>
                                           </div>
+                )}
 
-                                          {selectedCategory?.invoice_required && (
-                                            <ElectronicsVerification
-                                              billFile={billFile}
-                                              boxImage={boxImage}
-                                              onBillChange={handleBillChange}
-                                              onBoxImageChange={handleBoxImageChange}
-                                            />
-                                          )}
-                                        </>
-                                      )}
+                {/* Bill + product box: only for the listed product types in a category with invoice_required on */}
+                {needsDocs && (
+                  <ElectronicsVerification
+                    billFile={billFile}
+                    boxImage={boxImage}
+                    onBillChange={handleBillChange}
+                    onBoxImageChange={handleBoxImageChange}
+                  />
+                )}
 
                 {/* Price + Condition */}
 

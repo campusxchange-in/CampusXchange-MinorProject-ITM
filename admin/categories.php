@@ -1706,7 +1706,7 @@ include 'includes/admin_header.php';
 
                 <!-- INVOICE REQUIREMENT -->
 
-                <!-- <div class="category-form-group">
+                <div class="category-form-group">
 
                     <label>
                         Invoice Requirement
@@ -1740,7 +1740,7 @@ include 'includes/admin_header.php';
 
                     </small>
 
-                </div> -->
+                </div>
 
 
                 <!-- STATUS -->
@@ -1883,7 +1883,7 @@ include 'includes/admin_header.php';
 
                 <!-- INVOICE REQUIREMENT -->
 
-                <div class="category-form-group" style="display: none;">
+                <div class="category-form-group">
 
                     <label>
                         Invoice Requirement

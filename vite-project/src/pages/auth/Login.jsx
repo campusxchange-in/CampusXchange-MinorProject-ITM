@@ -126,7 +126,7 @@ export default function Login() {
           <form onSubmit={handleSubmit} noValidate>
             <div className={`auth-input-box${bad("email") ? " auth-has-error" : ""}`}>
               <FaEnvelope className="auth-icon" />
-              <input ref={refs.email} type="email" name="email" placeholder="College Email"
+              <input ref={refs.email} type="email" name="email" placeholder="Email"
                 value={values.email} onChange={handleChange} onBlur={handleBlur}
                 className={bad("email") ? "auth-input-error" : ""} autoComplete="email" />
             </div>

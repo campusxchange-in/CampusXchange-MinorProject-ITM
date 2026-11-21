@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2026 at 12:04 PM
+-- Generation Time: Nov 21, 2026 at 07:16 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -47,8 +47,8 @@ CREATE TABLE `admins` (
 
 INSERT INTO `admins` (`admin_id`, `full_name`, `email`, `pending_email`, `email_verified_at`, `password`, `admin_role`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Amit Sharma', 'nikhil@gmail.com', NULL, '2026-08-02 08:30:00', '$2y$10$hclHfe.H8T2BxCmXWCkrtO.U4k.GPws9hmEnHBKCUsYvwaTwzk.za', 'Main Admin', 'Active', '2026-09-19 21:38:51', '2026-10-29 13:52:37', NULL),
-(2, 'Neha Verma', 'a@g.c', NULL, '2026-08-02 08:45:00', '$2y$10$XZgiKGE4TS1uuzJftYkUseQwORu/heRiRFfxAslk3XiLhix2GPPKW', 'Sub Admin', 'Active', '2026-09-19 21:38:51', '2026-10-29 16:01:32', NULL),
-(9, 'Amit Sharma', 'nikhil123@gmail.com', '', '2026-11-14 22:34:30', '$2y$10$EFdv92JQ/vmqVLf66GlTCOQbtv2lAqEPp/s0IJR2yqrUYAhqSWjny', 'Sub Admin', 'Active', '2026-11-11 14:15:57', '2026-11-18 11:04:32', NULL);
+(2, 'Neha Verma', 'a@g.c', NULL, '2026-08-02 08:45:00', '$2y$10$XZgiKGE4TS1uuzJftYkUseQwORu/heRiRFfxAslk3XiLhix2GPPKW', 'Sub Admin', 'Suspended', '2026-09-19 21:38:51', '2026-11-18 12:29:40', NULL),
+(9, 'Amit Sharma', 'nikhilr@gmail.com', '', '2026-11-14 22:34:30', '$2y$10$EFdv92JQ/vmqVLf66GlTCOQbtv2lAqEPp/s0IJR2yqrUYAhqSWjny', 'Sub Admin', 'Active', '2026-11-11 14:15:57', '2026-11-21 18:12:34', NULL);
 
 -- --------------------------------------------------------
 
@@ -273,7 +273,20 @@ INSERT INTO `admin_logs` (`log_id`, `admin_id`, `action_type`, `action_descripti
 (176, 9, 'Logout', 'Admin \"Amit Sharma\" logged out successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-17 00:31:57', NULL),
 (177, 9, 'Login', 'Admin \"Amit Sharma\" logged in successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-17 08:34:42', NULL),
 (178, 9, 'Login', 'Admin \"Amit Sharma\" logged in successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 10:19:05', NULL),
-(179, 9, 'Manage Category', 'Deleted category \'clothing\'.', 'Category', 5, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 10:22:49', NULL);
+(179, 9, 'Manage Category', 'Deleted category \'clothing\'.', 'Category', 5, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 10:22:49', NULL),
+(180, 9, 'Login', 'Admin \"Amit Sharma\" logged in successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 12:17:55', NULL),
+(181, 9, 'Logout', 'Admin \"Amit Sharma\" logged out successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 12:18:15', NULL),
+(182, 9, 'Login', 'Admin \"Amit Sharma\" logged in successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 12:18:29', NULL),
+(183, 9, 'Logout', 'Admin \"Amit Sharma\" logged out successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 12:25:13', NULL),
+(184, 1, 'Login', 'Admin \"Amit Sharma\" logged in successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 12:25:20', NULL),
+(185, 1, 'Logout', 'Admin \"Amit Sharma\" logged out successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 12:30:21', NULL),
+(186, 9, 'Login', 'Admin \"Amit Sharma\" logged in successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 18:33:03', NULL),
+(187, 9, 'Review Report', 'Started reviewing report #10.', 'Report', 10, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-18 18:57:20', NULL),
+(188, 9, 'Login', 'Admin \"Amit Sharma\" logged in successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-19 04:23:20', NULL),
+(189, 9, 'Logout', 'Admin \"Amit Sharma\" logged out successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', '2026-11-19 04:39:29', NULL),
+(190, 9, 'Login', 'Admin \"Amit Sharma\" logged in successfully.', NULL, NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36', '2026-11-21 17:31:51', NULL),
+(191, 9, 'Verify User', 'Approved verification request #121 for user \"Anuj Kushwaha\".', 'User', 122, NULL, NULL, '2026-11-21 17:32:02', NULL),
+(192, 9, 'Manage Category', 'Updated category from \'Electronics\' to \'Electronics\'. Status set to Active. Invoice required.', 'Category', 2, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36', '2026-11-21 17:47:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -350,7 +363,8 @@ CREATE TABLE `admin_restrictions` (
 --
 
 INSERT INTO `admin_restrictions` (`restriction_id`, `admin_id`, `action_type`, `reason`, `performed_by`, `created_at`) VALUES
-(1, 2, 'Unsuspended', 'hggjhgj', 1, '2026-10-29 16:01:32');
+(1, 2, 'Unsuspended', 'hggjhgj', 1, '2026-10-29 16:01:32'),
+(2, 2, 'Suspended', 'jhgjhgk,hkhjkj', 1, '2026-11-18 12:29:40');
 
 -- --------------------------------------------------------
 
@@ -375,7 +389,7 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`category_id`, `category_name`, `description`, `invoice_required`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Books & Study Materials', 'Academic books, reference books, notes, and study materials.', 0, 'Active', '2026-09-19 21:38:51', '2026-09-20 11:12:25', NULL),
-(2, 'Electronics', 'Laptops, calculators, headphones, accessories, and other electronic items.', 0, 'Active', '2026-09-19 21:38:51', '2026-11-16 23:52:14', NULL),
+(2, 'Electronics', 'Laptops, calculators, headphones, accessories, and other electronic items.', 1, 'Active', '2026-09-19 21:38:51', '2026-11-21 17:47:35', NULL),
 (3, 'Furniture', 'Tables, chairs, study desks, shelves, and other furniture items.', 0, 'Active', '2026-09-19 21:38:51', '2026-11-16 23:52:44', NULL),
 (4, 'Clothing & Accessories', 'Clothing, bags, watches, shoes, and other personal accessories.', 0, 'Active', '2026-09-19 21:38:51', '2026-11-18 09:42:56', NULL),
 (5, 'clothing', 'ghhgfhg', 0, 'Inactive', '2026-09-20 11:27:47', '2026-11-18 10:22:49', '2026-11-18 15:52:49');
@@ -443,7 +457,35 @@ CREATE TABLE `login_security_activity` (
 
 INSERT INTO `login_security_activity` (`activity_id`, `user_id`, `activity_type`, `title`, `description`, `created_at`) VALUES
 (3, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-18 09:51:09'),
-(4, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-18 09:54:15');
+(4, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-18 09:54:15'),
+(7, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-18 12:08:02'),
+(8, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-18 12:17:37'),
+(9, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-18 18:45:37'),
+(10, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-18 19:51:11'),
+(11, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-18 19:53:17'),
+(12, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-18 19:54:58'),
+(13, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-18 19:55:15'),
+(14, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-18 19:56:11'),
+(15, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-18 19:57:00'),
+(16, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-18 19:57:46'),
+(17, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-18 19:58:05'),
+(18, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-18 19:58:46'),
+(19, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-18 20:00:40'),
+(20, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-18 20:00:46'),
+(21, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-19 04:21:31'),
+(22, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-19 04:23:04'),
+(23, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-19 04:35:57'),
+(24, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-19 04:37:14'),
+(25, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-19 04:41:38'),
+(26, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-19 04:47:35'),
+(27, 122, 'Login', 'Successful login', 'User logged in with Remember Me enabled.', '2026-11-19 04:49:00'),
+(28, 122, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-19 04:59:05'),
+(29, 122, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-19 04:59:14'),
+(30, 122, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-19 04:59:25'),
+(31, 1, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-19 05:04:42'),
+(32, 1, 'Token Revoked', 'User logged out', 'User logged out and the current remember token was revoked.', '2026-11-19 05:08:10'),
+(33, 122, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-19 05:10:47'),
+(34, 122, 'Login', 'Successful login', 'User logged in without Remember Me.', '2026-11-21 17:29:48');
 
 -- --------------------------------------------------------
 
@@ -671,7 +713,15 @@ INSERT INTO `notifications` (`notification_id`, `user_id`, `admin_id`, `notifica
 (158, 108, NULL, 'Product', 'Product Sold', 'Your Reading Lamp with Flexible Neck has been sold.', 'Product', 108, 1, '2026-10-25 10:03:39', NULL, NULL),
 (159, 112, NULL, 'Product', 'Product Sold', 'Your Desktop Organizer Shelf has been sold.', 'Product', 112, 1, '2026-08-11 10:03:39', NULL, NULL),
 (160, 116, NULL, 'Product', 'Product Sold', 'Your Wall-Mount Fan 400 mm has been sold.', 'Product', 116, 1, '2026-09-24 10:03:39', NULL, NULL),
-(161, 120, NULL, 'Product', 'Product Sold', 'Your Mini Rice Cooker 1.2 L has been sold.', 'Product', 120, 1, '2026-09-07 10:03:39', NULL, NULL);
+(161, 120, NULL, 'Product', 'Product Sold', 'Your Mini Rice Cooker 1.2 L has been sold.', 'Product', 120, 1, '2026-09-07 10:03:39', NULL, NULL),
+(162, NULL, 1, 'Report', 'New product report', 'A product \"Sipper Bottle 900 ml with Straw, Green\" was reported.', 'Report', 18, 0, '2026-11-18 18:51:06', NULL, NULL),
+(163, NULL, 9, 'Report', 'New product report', 'A product \"Sipper Bottle 900 ml with Straw, Green\" was reported.', 'Report', 18, 1, '2026-11-18 18:51:06', '2026-11-19 00:26:51', NULL),
+(164, NULL, 1, 'Report', 'New product report', 'A product \"Cube Storage Shelf, 6 Compartments\" was reported.', 'Report', 19, 0, '2026-11-18 18:56:08', NULL, NULL),
+(165, NULL, 9, 'Report', 'New product report', 'A product \"Cube Storage Shelf, 6 Compartments\" was reported.', 'Report', 19, 1, '2026-11-18 18:56:08', '2026-11-19 00:26:38', NULL),
+(166, NULL, 1, 'Verification', 'New verification request', 'Anuj Kushwaha submitted a profile for verification.', 'User', 122, 0, '2026-11-21 17:31:15', NULL, NULL),
+(167, NULL, 9, 'Verification', 'New verification request', 'Anuj Kushwaha submitted a profile for verification.', 'User', 122, 0, '2026-11-21 17:31:15', NULL, NULL),
+(168, 122, NULL, 'Verification', 'Verification submitted', 'Your profile was submitted. An admin will review it soon.', 'User', 122, 1, '2026-11-21 17:31:15', '2026-11-21 23:01:32', NULL),
+(169, 122, NULL, 'Verification', 'Verification Approved', 'Your identity verification has been approved. Your CampusXchange account is now active and you can access the full marketplace.', NULL, NULL, 1, '2026-11-21 17:32:02', '2026-11-21 23:38:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -698,6 +748,7 @@ CREATE TABLE `products` (
   `product_id` int(11) NOT NULL,
   `seller_id` int(11) NOT NULL,
   `category_id` int(11) DEFAULT NULL,
+  `product_type` varchar(50) DEFAULT NULL,
   `title` varchar(150) DEFAULT NULL,
   `description` text DEFAULT NULL,
   `price` decimal(10,2) DEFAULT NULL,
@@ -709,134 +760,135 @@ CREATE TABLE `products` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `deleted_at` datetime DEFAULT NULL,
-  `invoice_document` varchar(255) DEFAULT NULL
+  `invoice_document` varchar(255) DEFAULT NULL,
+  `product_box_image` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `seller_id`, `category_id`, `title`, `description`, `price`, `product_condition`, `status`, `removed_by_admin_id`, `removal_reason`, `removed_at`, `created_at`, `updated_at`, `deleted_at`, `invoice_document`) VALUES
-(1, 1, 2, 'Laptop 14-inch Core i5, 8GB RAM, 512GB SSD', 'Well-maintained 14-inch laptop with an Intel Core i5 processor, 8 GB RAM and a 512 GB SSD. It has been used for three years for coding and assignments and runs Windows 11 smoothly. Battery backup is around 3 to 4 hours. Light scratches on the lid, screen and keyboard are in perfect condition. Original charger and a padded laptop sleeve are included. Selling because I am moving to a new machine for my final-year project.', 28000.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-22 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(2, 2, 1, 'Higher Engineering Mathematics (Revised Edition) - Dr. R. K. Sharma', 'Core textbook for first-year and second-year engineering mathematics covering calculus, differential equations, Laplace transforms, Fourier series, vector calculus and complex analysis. All chapters are intact, a few important formulas are highlighted in pencil and there is no torn page. The cover has minor corner wear. An ideal book for exam preparation and daily practice.', 350.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-26 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(3, 3, 1, 'Computer Science Book Bundle: Data Structures in C, Algorithms, Operating Systems', 'Set of three semester books: Data Structures in C, Algorithms: Design & Analysis and Operating System Concepts. They were bought last year and used only for one semester; there is no writing inside and the spines are not broken. Very useful for placement preparation and viva. Selling the full bundle together as I have completed these subjects.', 500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-30 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(4, 4, 1, 'Engineering Drawing Kit: Set Squares, Protractor, Compass, 30 cm Ruler', 'Complete drawing kit for the first-year Engineering Graphics course: 45-degree and 30-60-degree set squares, a 180-degree protractor, a metal compass with pencil adapter and a 30 cm scale. All instruments are in working condition and the markings are clearly visible. Compass joint is smooth and the ruler is straight. Perfect for new students joining this session.', 400.00, 'Used', 'Active', NULL, NULL, NULL, '2026-09-03 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(5, 5, 2, 'Scientific Calculator CX-991 Classwiz (552 functions)', 'Non-programmable scientific calculator accepted in university examinations. It supports equation solving, matrices, vectors, statistics, base-n calculations and natural textbook display. Works on solar power with battery backup and the display is crisp with no dead segments. Comes with the hard slide cover. Used for only two semesters and always kept in the cover.', 650.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-07 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(6, 6, 2, 'Wireless Bluetooth Over-Ear Headphones with Mic', 'Foldable over-ear Bluetooth headphones with deep bass, soft ear cushions and a built-in microphone for online lectures and calls. Battery lasts around 20 hours on a single charge, and a 3.5 mm cable is included for wired use. Pairing is quick and stable up to 10 metres. Cushions are clean and there are no cracks. Charging cable and carry pouch included.', 1200.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-11 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(7, 8, 2, 'Power Bank 20000 mAh, 22.5W Fast Charging, Dual Output', '20000 mAh power bank with USB-C input and output, one USB-A port and a four-LED battery indicator. Charges a typical smartphone about four times and supports 22.5W fast charging. Perfect for long days at college and travel. Works exactly as it should and holds charge well. Minor scuffs on the back. Charging cable included.', 700.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-15 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(8, 8, 2, 'Mechanical Keyboard, 75% Layout, Hot-Swappable, Blue Switches', 'Compact 75 percent mechanical keyboard with hot-swappable blue switches, PBT-style keycaps with orange accent keys and a detachable USB-C cable. Very satisfying to type on and great for coding. All keys register properly and the keycaps are clean without any shine. Original keycap puller and a spare switch set are included. Selling because I shifted to a quieter keyboard for the hostel.', 1800.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-19 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(9, 9, 2, 'Arduino Uno R3 Starter Kit with Breadboard, Sensors and LEDs', 'Unused starter kit made for embedded-systems labs and mini projects. It contains an Arduino Uno R3 compatible board, USB cable, half-size breadboard, jumper wires, LEDs, resistors, an ultrasonic sensor, a 16x2 LCD display and a few push buttons. All parts are sealed and tested. A great way to start learning electronics. I received a duplicate kit during a workshop, hence selling this one.', 900.00, 'New', 'Active', NULL, NULL, NULL, '2026-09-23 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(10, 10, 2, '24-inch Full HD IPS Monitor with HDMI and VGA', '24-inch Full HD (1920 x 1080) IPS monitor with HDMI and VGA inputs, tilt-adjustable stand and thin bezels. Colours are accurate and bright, there are no dead pixels and no screen burn. Used in my office as a second display for two years. Power cable and HDMI cable are included. Collection from the CSE department office on working days.', 4500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-27 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(11, 11, 3, 'Wooden Study Table with 3 Drawers and Side Cabinet', 'Sturdy wooden study table with a large work surface, three drawers on the left and a side cabinet on the right. The surface is clean and the drawers slide smoothly. Suitable for a hostel room or a rented flat, easily fits a laptop and monitor. The legs have been stabilised with screws and there is no wobble. Buyer must arrange pickup; I can help with moving it across campus.', 1800.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-01 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(12, 12, 3, 'Ergonomic Mesh Office Chair with Adjustable Height and Armrests', 'Comfortable ergonomic chair with a breathable mesh back, lumbar support, adjustable height, fixed armrests and smooth rolling wheels. Great for long study sessions. The gas lift works properly and the wheels rotate without noise. Seat cushion shows slight wear but is still firm. Easy to carry in a car or auto.', 1500.00, 'Used', 'Active', NULL, NULL, NULL, '2026-10-05 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(13, 12, 3, 'Wooden Bookshelf with 4 Shelves', 'Four-tier wooden bookshelf with a plain back panel, ideal for textbooks, files and decorative items. Each shelf is strong enough for heavy books and the finish is clean with only minor scratches on the sides. Dimensions are about 70 cm wide, 120 cm tall and 30 cm deep. Selling as I am moving to a smaller room. Pickup from the main gate area only.', 1200.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-09 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(14, 14, 3, 'Adjustable LED Study Lamp with Dimmer and USB Charging', 'Flexible LED desk lamp with three brightness levels, a warm and cool light mode and a USB port for charging a phone. The arm can be moved and locked at any angle and the base is heavy enough not to tip over. It gives glare-free light and is perfect for night study. Used for a few months only. Power adapter included.', 350.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-13 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(15, 15, 3, 'Table Fan 400 mm, 3 Speed Settings', 'Powerful 400 mm table fan with three speed settings and a sturdy metal guard. It oscillates smoothly and moves a lot of air, making it perfect for summer in hostel rooms. The blades are clean and balanced and make little noise. Cleaned and serviced recently. Selling because I am shifting into an air-cooled room.', 600.00, 'Used', 'Active', NULL, NULL, NULL, '2026-10-17 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(16, 16, 4, 'Water-Resistant College Backpack, 30L with Laptop Compartment', 'Spacious 30-litre backpack with a padded laptop compartment that fits up to a 15.6-inch laptop, a large front pocket, two side bottle pockets and a front organiser. It is water resistant and the zips run smoothly. Shoulder straps are well padded and comfortable. Small stitching mark at one corner but fully functional. A great all-day college bag.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-21 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(17, 17, 4, 'White Lab Coat (Size M), Full Sleeves', 'Standard white lab coat in medium size with full sleeves, two front pockets and a chest pocket. Worn for only two semesters in the pharmacy lab and always washed and ironed. There are no stains or tears and all buttons are in place. Chest around 38 inches, length around 36 inches. Required for practical classes.', 250.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-25 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(18, 18, 4, 'Maroon Cotton Fleece Hoodie (Size L)', 'Warm maroon fleece hoodie with a kangaroo pocket, drawstring hood and ribbed cuffs. Fabric is soft and has not pilled. Perfect for Gwalior winters and early morning classes. Size L, fits a chest of about 40 to 42 inches. Washed and ready to use. Selling because it is slightly big for me.', 450.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-29 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(19, 19, 4, 'Running Shoes UK Size 8, Blue and Neon Green', 'Lightweight running shoes in UK size 8 with breathable mesh, cushioned midsole and a grippy outsole. Used for about five months of morning runs on campus. The sole still has plenty of tread and the cushioning is good. Cleaned and deodorised. Not suitable for anyone with a different size, so please check before messaging.', 800.00, 'Used', 'Active', NULL, NULL, NULL, '2026-11-02 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(20, 20, 4, 'Classic Analog Quartz Wrist Watch with Leather Strap', 'Elegant analog quartz watch with a white dial, steel case and a genuine brown leather strap. Keeps accurate time and the battery was replaced recently. Water-resistant for splashes, not for swimming. No scratches on the glass. Selling as I received a similar watch as a gift. Original box available on request.', 1100.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-11-06 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(21, 21, 1, 'Engineering Physics Textbook (Revised Edition)', 'Standard first-year textbook covering optics, lasers and semiconductors. All pages intact with light pencil notes on a few chapters.', 280.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-17 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(22, 22, 1, 'Data Structures Using C Book Set (2 Books)', 'Two books for the data structures course, barely used. Clean pages, no highlighting, ideal for lab and exam preparation.', 420.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(23, 23, 1, 'Digital Electronics Textbook with Solved Examples', 'Clear explanations with plenty of solved problems. Cover has minor wear, inside is neat and complete.', 300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-06 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(24, 24, 1, 'Engineering Chemistry Notes and Textbook Bundle', 'Textbook plus handwritten chapter-wise notes from a topper. Some pages are folded but everything is readable.', 250.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-10-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(25, 25, 2, 'Scientific Calculator fx-991EX ClassWiz', 'Allowed in most university exams. Works perfectly, fresh batteries and the slide-on cover are included.', 700.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-12 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(26, 26, 2, 'Casio FX-82MS Scientific Calculator', 'Reliable calculator with 240 functions. Light scratches on the body, display and keys are perfect.', 350.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-26 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(27, 27, 2, 'Scientific Calculator 570 Functions with Cover', 'Solar and battery powered. Used for two semesters, comes with a hard protective case.', 500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-11-01 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(28, 28, 2, 'Scientific Calculator Pink Edition, 417 Functions', 'Fully working and handy for hostel study sessions. Selling because I bought a newer model.', 450.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(29, 29, 4, 'Laptop Backpack 35L Black with Rain Cover', 'Spacious bag with padded laptop compartment, multiple pockets and a rain cover. Zips work smoothly.', 700.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-07 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(30, 30, 4, 'College Sling Bag, Navy Blue', 'Compact sling bag for daily essentials, used only a few times. No stains or tears.', 300.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-28 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(31, 31, 4, 'Trekking Backpack 45L Grey', 'Sturdy backpack with strong stitching and a chest strap. Great for trips and weekend treks.', 900.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(32, 32, 4, 'Water-Resistant Backpack with USB Port, Red', 'Has an external USB charging port and anti-theft back pocket. Looks almost new.', 650.00, 'Like New', 'Sold', NULL, NULL, NULL, '2026-09-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(33, 22, 4, 'Black Zip Hoodie (Size M)', 'Warm fleece-lined hoodie with a full zip and two pockets. Washed and ready to wear.', 400.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(34, 34, 4, 'Grey Round-Neck Sweatshirt (Size L)', 'Soft cotton blend sweatshirt, no fading or pilling. Perfect for winter mornings.', 300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(35, 35, 4, 'Navy Blue Hoodie with Front Pocket (Size XL)', 'Worn only a couple of times. Thick material that keeps you warm in hostel winters.', 450.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-30 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(36, 36, 4, 'Green Cotton Hoodie (Size S)', 'Comfortable everyday hoodie with a small mark on the sleeve that is barely visible.', 350.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(37, 37, 4, 'Running Shoes UK Size 9, Black and Orange', 'Lightweight running shoes with good grip. Used for morning jogs on campus, sole still in good shape.', 900.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(38, 38, 4, 'White Sneakers UK Size 7', 'Clean white sneakers worn only a few times. Comes with a spare set of laces.', 700.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-11-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(39, 39, 4, 'Sports Shoes UK Size 10, Blue', 'Comfortable cushioned sports shoes. Light wear on the sole, no tears.', 800.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(40, 40, 4, 'Casual Canvas Shoes UK Size 8, Red', 'Everyday canvas shoes in decent condition. Washed and sun-dried.', 450.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(41, 41, 4, 'Digital Sports Watch, Black', 'Water-resistant digital watch with stopwatch, alarm and backlight. Battery recently changed.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-21 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(42, 42, 4, 'Analog Wrist Watch with Steel Strap', 'Elegant formal watch with a scratch-free dial. Strap length can be adjusted.', 900.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-07 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(43, 43, 4, 'Smart Fitness Band with Heart Rate Monitor', 'Tracks steps, sleep and heart rate. Charger included, battery lasts about a week.', 700.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(44, 44, 4, 'Classic Leather Strap Watch, Brown', 'Simple analog watch with a genuine leather strap. Keeps good time.', 500.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-06 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(45, 45, 4, 'Denim Jacket (Size M)', 'Classic blue denim jacket in a regular fit. No tears and all buttons are intact.', 650.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-07 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(46, 46, 4, 'Black Windcheater Jacket (Size L)', 'Light windproof jacket with zip pockets. Good for rainy days and night rides.', 500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(47, 47, 4, 'Puffer Jacket for Winter, Blue (Size M)', 'Very warm quilted jacket, worn for a single winter. Zip works perfectly.', 1100.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(48, 48, 4, 'Varsity Jacket Maroon (Size S)', 'Stylish varsity jacket with contrast sleeves. Small fading near the cuffs.', 800.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-10-30 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(49, 49, 4, 'Stainless Steel Water Bottle 1 L', 'Leak-proof steel bottle with a sturdy cap. A small dent at the bottom, works perfectly.', 250.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(50, 50, 4, 'Insulated Flask 750 ml, Keeps Cold 12 Hours', 'Double-wall insulated flask for hot or cold drinks. No smell, cleaned regularly.', 400.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-16 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(51, 51, 4, 'Sipper Bottle 900 ml with Straw, Green', 'BPA-free sipper bottle with a flip straw. Great for lectures and the gym.', 150.00, 'Good', 'Active', NULL, NULL, NULL, '2026-11-09 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(52, 52, 4, 'Gym Shaker Bottle 700 ml', 'Shaker with a mixing ball and measurement marks. Cleaned and ready to use.', 120.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-14 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(53, 53, 2, '6-Socket Extension Board with Surge Protector', 'Six sockets with individual switch and 3 m cable. Ideal for hostel rooms and study desks.', 350.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-13 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(54, 54, 2, '4-Socket Extension Board, 3 Metre Cable', 'Sturdy extension board with overload protection. No burn marks, works perfectly.', 250.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-17 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(55, 55, 2, 'Multi-Plug Extension with USB Ports', 'Three sockets and two USB charging ports. Barely used.', 400.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-19 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(56, 56, 2, 'Travel Adapter with Extension Board', 'Handy adapter with multiple sockets. Light scratches but fully working.', 300.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(57, 57, 2, 'Wired Over-Ear Headphones with Mic', 'Comfortable ear cushions and clear sound. Works well for classes and calls.', 450.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-06 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(58, 26, 2, 'Wireless Bluetooth Headphones, 30 Hour Battery', 'Long battery life with deep bass and a built-in mic. Charging cable included.', 1300.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(59, 59, 2, 'Gaming Headset with Noise-Cancelling Mic', 'Adjustable headband, soft padding and a flexible mic. Works with PC and mobile.', 1100.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(60, 60, 2, 'Foldable On-Ear Headphones, Pink', 'Lightweight foldable headphones with good sound. Padding shows slight wear.', 600.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-10-16 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(61, 61, 2, 'Wireless Optical Mouse 2.4 GHz', 'Smooth tracking and quiet clicks. USB receiver and fresh battery included.', 250.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(62, 62, 2, 'Gaming Mouse with 6 Buttons and RGB', 'Adjustable DPI and colourful lighting. Barely used, no double-click issues.', 500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-09 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(63, 63, 2, 'Bluetooth Silent Click Mouse', 'Works with laptops and tablets. Silent buttons are great for the library.', 400.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(64, 64, 2, 'Wired USB Mouse, Black', 'Basic wired mouse that still works perfectly, a little worn on the surface.', 150.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-13 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(65, 65, 2, 'Wireless Keyboard and Mouse Combo', 'Slim combo with one USB receiver. Works up to 10 m. Batteries included.', 700.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(66, 66, 2, 'Full-Size USB Keyboard with Number Pad', 'Comfortable keys and a spill-resistant design. Everything works as it should.', 300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-26 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(67, 67, 2, 'Compact Bluetooth Keyboard for Tablet', 'Pairs with phones, tablets and laptops. Rechargeable with a long battery life.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(68, 68, 2, 'RGB Gaming Keyboard with Blue Switches', 'Clicky mechanical switches with multi-colour backlight. Detachable cable.', 1100.00, 'Like New', 'Sold', NULL, NULL, NULL, '2026-08-18 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(69, 69, 2, 'Power Bank 10000 mAh Fast Charging', 'Charges a phone about 2.5 times. Both USB ports and Type-C work fine.', 500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-07-28 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(70, 70, 2, 'Power Bank 20000 mAh Dual USB', 'High-capacity power bank for long days on campus. Holds charge very well.', 800.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(71, 71, 2, 'Slim Power Bank 5000 mAh', 'Pocket-sized and light. Used rarely, with an LED battery indicator.', 300.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(72, 72, 2, 'Power Bank 15000 mAh with Type-C Fast Charge', 'Supports fast charging in and out. Minor scratches on the casing.', 650.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-21 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(73, 73, 2, '10-inch Android Tablet 4GB RAM 64GB', 'Great for reading PDFs and online classes. Charger and a flip cover are included.', 6500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-23 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(74, 74, 2, '8-inch Tablet with Stylus', 'Perfect for taking handwritten notes. Screen has a guard from day one.', 4500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(75, 75, 2, 'Drawing Tablet for Notes and Design', 'Pressure-sensitive pen, works with Windows and Mac. Driver CD and cable are included.', 3500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-26 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(76, 76, 2, '7-inch Wi-Fi Tablet for Study Use', 'Simple tablet for e-books and videos. Battery lasts around 5 hours.', 2500.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-12 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(77, 77, 2, 'Portable Bluetooth Speaker, Waterproof', 'Loud and clear sound, battery lasts nearly 8 hours. Charging cable included.', 800.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-04 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(78, 78, 2, 'Mini Bluetooth Speaker with FM Radio', 'Pocket speaker with memory card slot and radio. Sound is crisp at medium volume.', 450.00, 'Used', 'Active', NULL, NULL, NULL, '2026-10-19 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(79, 79, 2, 'Party Speaker 20W with Mic Input', 'Powerful bass with an AUX and mic input. Great for hostel get-togethers.', 1500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(80, 80, 2, 'Desktop Speakers 2.0 USB', 'Compact desktop pair powered through USB. Clean stereo sound for movies and music.', 600.00, 'Good', 'Sold', NULL, NULL, NULL, '2026-08-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(81, 81, 2, 'Laptop 15.6 inch Core i3, 8GB RAM, 256GB SSD', 'Smooth for coding and assignments. Battery gives about 3 hours. Charger included.', 22000.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(82, 82, 2, 'Laptop 14 inch Ryzen 5, 16GB RAM, 512GB SSD', 'Fast machine for programming and light editing. Bought last year, with warranty remaining.', 32000.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-14 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(83, 83, 2, 'Refurbished Business Laptop Core i5, 8GB RAM', 'Sturdy business laptop with a good keyboard. New SSD installed recently.', 18000.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(84, 29, 2, 'Lightweight Laptop 13.3 inch, 8GB RAM, 256GB SSD', 'Easy to carry to class. Occasional light use, no dead pixels.', 20000.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(85, 85, 2, 'Wi-Fi Router 300 Mbps with 3 Antennas', 'Stable connection for a hostel room. Power adapter and LAN cable included.', 500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-25 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(86, 86, 2, 'Dual-Band Wi-Fi Router AC1200', 'Fast dual-band router with easy mobile app setup. Used for only a few months.', 900.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(87, 87, 2, 'Portable 4G Wi-Fi Hotspot Device', 'Works with any SIM and connects up to 10 devices. Battery lasts around 6 hours.', 1200.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(88, 88, 2, 'Wi-Fi Range Extender', 'Extends your signal to far corners. Simple plug-and-play setup.', 400.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-07-31 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(89, 89, 1, 'Engineering Drawing Board with T-Square', 'Smooth board with a sliding T-square. Used for one year of drawing practicals.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(90, 90, 1, 'Clipboard Set with A3 Sheets', 'Sturdy clipboard with 20 blank A3 sheets. Handy for sketching.', 250.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(91, 91, 1, 'Drafter Mini Set with Scale', 'Mini drafter with a scale for engineering graphics. Moves smoothly.', 350.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-31 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(92, 92, 1, 'Sketching Board A3 Size', 'Light wooden board with edge clips. Small scratches, perfectly usable.', 300.00, 'Used', 'Active', NULL, NULL, NULL, '2026-11-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(93, 93, 2, '22-inch Full HD LED Monitor', 'Bright, sharp screen with HDMI and VGA ports. No dead pixels or lines.', 3500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(94, 94, 2, '27-inch IPS Monitor 75 Hz', 'Wide viewing angles and thin bezels. Perfect for coding and design work.', 7500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-19 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(95, 95, 2, '19-inch Monitor for Basic Use', 'Reliable monitor for assignments and browsing. Stand included.', 2000.00, 'Used', 'Active', NULL, NULL, NULL, '2026-11-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(96, 96, 2, '24-inch Curved Monitor', 'Immersive curved display, good for movies and gaming. VGA and HDMI cables included.', 6000.00, 'Good', 'Sold', NULL, NULL, NULL, '2026-10-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(97, 97, 3, 'Study Chair with Cushioned Seat', 'Comfortable chair with a firm back. Wheels roll smoothly.', 1200.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(98, 98, 3, 'Gaming Chair with Lumbar Support', 'Reclining chair with adjustable armrests. Used for a few months.', 3500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(99, 99, 3, 'Plastic Armchair for Hostel Use', 'Simple lightweight chair, easy to clean. Slight colour fading.', 500.00, 'Used', 'Active', NULL, NULL, NULL, '2026-07-31 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(100, 100, 3, 'Revolving Chair, Black', 'Height-adjustable revolving chair with a padded seat. Gas lift works fine.', 1400.00, 'Good', 'Sold', NULL, NULL, NULL, '2026-10-21 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(101, 101, 3, 'Foldable Laptop Table, Adjustable Height', 'Lightweight table for bed or floor use. Folds flat for storage.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-26 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(102, 102, 3, 'Computer Desk 4 ft with Keyboard Tray', 'Solid desk with space for monitor and CPU. Assembly guide included.', 2200.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-09 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(103, 103, 3, 'Study Table with Drawer', 'Sturdy table with one lockable drawer. Minor surface scratches.', 1800.00, 'Used', 'Active', NULL, NULL, NULL, '2026-09-04 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(104, 104, 3, 'Compact Writing Desk, Walnut Finish', 'Neat desk for small rooms. Used for one semester.', 1500.00, 'Like New', 'Sold', NULL, NULL, NULL, '2026-08-16 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(105, 105, 3, 'LED Desk Lamp with Touch Dimmer', 'Three brightness levels and a flexible neck. Easy on the eyes during late-night study.', 400.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-28 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(106, 106, 3, 'Rechargeable Study Lamp with Clamp', 'Clamps to any desk edge. Battery lasts about 6 hours per charge.', 450.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(107, 107, 3, 'Foldable Table Lamp, Warm Light', 'Compact lamp that folds for easy carrying. Warm white light.', 300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-15 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(108, 108, 3, 'Reading Lamp with Flexible Neck', 'Bendable neck and a stable base. Bulb replaced recently.', 350.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-10-22 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(109, 109, 3, 'Wall-Mounted Floating Shelf Set of 3', 'Three shelves with screws and brackets. Great for books and decor.', 500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(110, 110, 3, '5-Tier Book Rack, Metal Frame', 'Strong rack that holds plenty of books. Easy to disassemble for moving.', 1300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-16 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(111, 111, 3, 'Cube Storage Shelf, 6 Compartments', 'Neat cubes for books, bags and boxes. Minor edge scratches.', 1700.00, 'Good', 'Active', NULL, NULL, NULL, '2026-11-06 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(112, 112, 3, 'Desktop Organizer Shelf', 'Keeps stationery and files in order. Sturdy and compact.', 400.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(113, 113, 3, 'Table Fan 300 mm, Oscillating', 'Quiet motor and three speed settings. Oscillation works smoothly.', 550.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(114, 114, 3, 'Pedestal Fan 400 mm', 'Height-adjustable stand with strong airflow. Cleaned and serviced.', 1300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-17 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(115, 115, 3, 'USB Mini Desk Fan', 'Small fan powered via USB. Quiet and great for study desks.', 200.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(116, 116, 3, 'Wall-Mount Fan 400 mm', 'High-speed fan with a sturdy wall bracket. Works perfectly.', 1000.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-21 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(117, 117, 3, 'Electric Kettle 1.5 L, Stainless Steel', 'Boils water in minutes with auto shut-off. Clean interior, no limescale.', 550.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-22 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(118, 118, 3, 'Mini Electric Kettle 1 L', 'Compact kettle for hostel use. Used for a few months.', 400.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-25 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(119, 119, 3, 'Induction Cooktop 2000 W', 'Touch panel with preset cooking modes. Works with any induction-friendly pot.', 1500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL),
-(120, 120, 3, 'Mini Rice Cooker 1.2 L', 'Cooks rice and veggies. Non-stick pot has minor wear.', 800.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-04 10:03:39', '2026-11-18 10:03:39', NULL, NULL);
+INSERT INTO `products` (`product_id`, `seller_id`, `category_id`, `product_type`, `title`, `description`, `price`, `product_condition`, `status`, `removed_by_admin_id`, `removal_reason`, `removed_at`, `created_at`, `updated_at`, `deleted_at`, `invoice_document`, `product_box_image`) VALUES
+(1, 1, 2, NULL, 'Laptop 14-inch Core i5, 8GB RAM, 512GB SSD', 'Well-maintained 14-inch laptop with an Intel Core i5 processor, 8 GB RAM and a 512 GB SSD. It has been used for three years for coding and assignments and runs Windows 11 smoothly. Battery backup is around 3 to 4 hours. Light scratches on the lid, screen and keyboard are in perfect condition. Original charger and a padded laptop sleeve are included. Selling because I am moving to a new machine for my final-year project.', 28000.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-22 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(2, 2, 1, NULL, 'Higher Engineering Mathematics (Revised Edition) - Dr. R. K. Sharma', 'Core textbook for first-year and second-year engineering mathematics covering calculus, differential equations, Laplace transforms, Fourier series, vector calculus and complex analysis. All chapters are intact, a few important formulas are highlighted in pencil and there is no torn page. The cover has minor corner wear. An ideal book for exam preparation and daily practice.', 350.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-26 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(3, 3, 1, NULL, 'Computer Science Book Bundle: Data Structures in C, Algorithms, Operating Systems', 'Set of three semester books: Data Structures in C, Algorithms: Design & Analysis and Operating System Concepts. They were bought last year and used only for one semester; there is no writing inside and the spines are not broken. Very useful for placement preparation and viva. Selling the full bundle together as I have completed these subjects.', 500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-30 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(4, 4, 1, NULL, 'Engineering Drawing Kit: Set Squares, Protractor, Compass, 30 cm Ruler', 'Complete drawing kit for the first-year Engineering Graphics course: 45-degree and 30-60-degree set squares, a 180-degree protractor, a metal compass with pencil adapter and a 30 cm scale. All instruments are in working condition and the markings are clearly visible. Compass joint is smooth and the ruler is straight. Perfect for new students joining this session.', 400.00, 'Used', 'Active', NULL, NULL, NULL, '2026-09-03 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(5, 5, 2, NULL, 'Scientific Calculator CX-991 Classwiz (552 functions)', 'Non-programmable scientific calculator accepted in university examinations. It supports equation solving, matrices, vectors, statistics, base-n calculations and natural textbook display. Works on solar power with battery backup and the display is crisp with no dead segments. Comes with the hard slide cover. Used for only two semesters and always kept in the cover.', 650.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-07 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(6, 6, 2, NULL, 'Wireless Bluetooth Over-Ear Headphones with Mic', 'Foldable over-ear Bluetooth headphones with deep bass, soft ear cushions and a built-in microphone for online lectures and calls. Battery lasts around 20 hours on a single charge, and a 3.5 mm cable is included for wired use. Pairing is quick and stable up to 10 metres. Cushions are clean and there are no cracks. Charging cable and carry pouch included.', 1200.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-11 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(7, 8, 2, NULL, 'Power Bank 20000 mAh, 22.5W Fast Charging, Dual Output', '20000 mAh power bank with USB-C input and output, one USB-A port and a four-LED battery indicator. Charges a typical smartphone about four times and supports 22.5W fast charging. Perfect for long days at college and travel. Works exactly as it should and holds charge well. Minor scuffs on the back. Charging cable included.', 700.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-15 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(8, 8, 2, NULL, 'Mechanical Keyboard, 75% Layout, Hot-Swappable, Blue Switches', 'Compact 75 percent mechanical keyboard with hot-swappable blue switches, PBT-style keycaps with orange accent keys and a detachable USB-C cable. Very satisfying to type on and great for coding. All keys register properly and the keycaps are clean without any shine. Original keycap puller and a spare switch set are included. Selling because I shifted to a quieter keyboard for the hostel.', 1800.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-19 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(9, 9, 2, NULL, 'Arduino Uno R3 Starter Kit with Breadboard, Sensors and LEDs', 'Unused starter kit made for embedded-systems labs and mini projects. It contains an Arduino Uno R3 compatible board, USB cable, half-size breadboard, jumper wires, LEDs, resistors, an ultrasonic sensor, a 16x2 LCD display and a few push buttons. All parts are sealed and tested. A great way to start learning electronics. I received a duplicate kit during a workshop, hence selling this one.', 900.00, 'New', 'Active', NULL, NULL, NULL, '2026-09-23 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(10, 10, 2, NULL, '24-inch Full HD IPS Monitor with HDMI and VGA', '24-inch Full HD (1920 x 1080) IPS monitor with HDMI and VGA inputs, tilt-adjustable stand and thin bezels. Colours are accurate and bright, there are no dead pixels and no screen burn. Used in my office as a second display for two years. Power cable and HDMI cable are included. Collection from the CSE department office on working days.', 4500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-27 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(11, 11, 3, NULL, 'Wooden Study Table with 3 Drawers and Side Cabinet', 'Sturdy wooden study table with a large work surface, three drawers on the left and a side cabinet on the right. The surface is clean and the drawers slide smoothly. Suitable for a hostel room or a rented flat, easily fits a laptop and monitor. The legs have been stabilised with screws and there is no wobble. Buyer must arrange pickup; I can help with moving it across campus.', 1800.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-01 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(12, 12, 3, NULL, 'Ergonomic Mesh Office Chair with Adjustable Height and Armrests', 'Comfortable ergonomic chair with a breathable mesh back, lumbar support, adjustable height, fixed armrests and smooth rolling wheels. Great for long study sessions. The gas lift works properly and the wheels rotate without noise. Seat cushion shows slight wear but is still firm. Easy to carry in a car or auto.', 1500.00, 'Used', 'Active', NULL, NULL, NULL, '2026-10-05 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(13, 12, 3, NULL, 'Wooden Bookshelf with 4 Shelves', 'Four-tier wooden bookshelf with a plain back panel, ideal for textbooks, files and decorative items. Each shelf is strong enough for heavy books and the finish is clean with only minor scratches on the sides. Dimensions are about 70 cm wide, 120 cm tall and 30 cm deep. Selling as I am moving to a smaller room. Pickup from the main gate area only.', 1200.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-09 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(14, 14, 3, NULL, 'Adjustable LED Study Lamp with Dimmer and USB Charging', 'Flexible LED desk lamp with three brightness levels, a warm and cool light mode and a USB port for charging a phone. The arm can be moved and locked at any angle and the base is heavy enough not to tip over. It gives glare-free light and is perfect for night study. Used for a few months only. Power adapter included.', 350.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-13 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(15, 15, 3, NULL, 'Table Fan 400 mm, 3 Speed Settings', 'Powerful 400 mm table fan with three speed settings and a sturdy metal guard. It oscillates smoothly and moves a lot of air, making it perfect for summer in hostel rooms. The blades are clean and balanced and make little noise. Cleaned and serviced recently. Selling because I am shifting into an air-cooled room.', 600.00, 'Used', 'Active', NULL, NULL, NULL, '2026-10-17 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(16, 16, 4, NULL, 'Water-Resistant College Backpack, 30L with Laptop Compartment', 'Spacious 30-litre backpack with a padded laptop compartment that fits up to a 15.6-inch laptop, a large front pocket, two side bottle pockets and a front organiser. It is water resistant and the zips run smoothly. Shoulder straps are well padded and comfortable. Small stitching mark at one corner but fully functional. A great all-day college bag.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-21 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(17, 17, 4, NULL, 'White Lab Coat (Size M), Full Sleeves', 'Standard white lab coat in medium size with full sleeves, two front pockets and a chest pocket. Worn for only two semesters in the pharmacy lab and always washed and ironed. There are no stains or tears and all buttons are in place. Chest around 38 inches, length around 36 inches. Required for practical classes.', 250.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-25 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(18, 18, 4, NULL, 'Maroon Cotton Fleece Hoodie (Size L)', 'Warm maroon fleece hoodie with a kangaroo pocket, drawstring hood and ribbed cuffs. Fabric is soft and has not pilled. Perfect for Gwalior winters and early morning classes. Size L, fits a chest of about 40 to 42 inches. Washed and ready to use. Selling because it is slightly big for me.', 450.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-29 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(19, 19, 4, NULL, 'Running Shoes UK Size 8, Blue and Neon Green', 'Lightweight running shoes in UK size 8 with breathable mesh, cushioned midsole and a grippy outsole. Used for about five months of morning runs on campus. The sole still has plenty of tread and the cushioning is good. Cleaned and deodorised. Not suitable for anyone with a different size, so please check before messaging.', 800.00, 'Used', 'Active', NULL, NULL, NULL, '2026-11-02 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(20, 20, 4, NULL, 'Classic Analog Quartz Wrist Watch with Leather Strap', 'Elegant analog quartz watch with a white dial, steel case and a genuine brown leather strap. Keeps accurate time and the battery was replaced recently. Water-resistant for splashes, not for swimming. No scratches on the glass. Selling as I received a similar watch as a gift. Original box available on request.', 1100.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-11-06 09:42:56', '2026-11-18 09:42:56', NULL, NULL, NULL),
+(21, 21, 1, NULL, 'Engineering Physics Textbook (Revised Edition)', 'Standard first-year textbook covering optics, lasers and semiconductors. All pages intact with light pencil notes on a few chapters.', 280.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-17 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(22, 22, 1, NULL, 'Data Structures Using C Book Set (2 Books)', 'Two books for the data structures course, barely used. Clean pages, no highlighting, ideal for lab and exam preparation.', 420.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(23, 23, 1, NULL, 'Digital Electronics Textbook with Solved Examples', 'Clear explanations with plenty of solved problems. Cover has minor wear, inside is neat and complete.', 300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-06 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(24, 24, 1, NULL, 'Engineering Chemistry Notes and Textbook Bundle', 'Textbook plus handwritten chapter-wise notes from a topper. Some pages are folded but everything is readable.', 250.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-10-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(25, 25, 2, NULL, 'Scientific Calculator fx-991EX ClassWiz', 'Allowed in most university exams. Works perfectly, fresh batteries and the slide-on cover are included.', 700.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-12 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(26, 26, 2, NULL, 'Casio FX-82MS Scientific Calculator', 'Reliable calculator with 240 functions. Light scratches on the body, display and keys are perfect.', 350.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-26 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(27, 27, 2, NULL, 'Scientific Calculator 570 Functions with Cover', 'Solar and battery powered. Used for two semesters, comes with a hard protective case.', 500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-11-01 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(28, 28, 2, NULL, 'Scientific Calculator Pink Edition, 417 Functions', 'Fully working and handy for hostel study sessions. Selling because I bought a newer model.', 450.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(29, 29, 4, NULL, 'Laptop Backpack 35L Black with Rain Cover', 'Spacious bag with padded laptop compartment, multiple pockets and a rain cover. Zips work smoothly.', 700.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-07 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(30, 30, 4, NULL, 'College Sling Bag, Navy Blue', 'Compact sling bag for daily essentials, used only a few times. No stains or tears.', 300.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-28 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(31, 31, 4, NULL, 'Trekking Backpack 45L Grey', 'Sturdy backpack with strong stitching and a chest strap. Great for trips and weekend treks.', 900.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(32, 32, 4, NULL, 'Water-Resistant Backpack with USB Port, Red', 'Has an external USB charging port and anti-theft back pocket. Looks almost new.', 650.00, 'Like New', 'Sold', NULL, NULL, NULL, '2026-09-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(33, 22, 4, NULL, 'Black Zip Hoodie (Size M)', 'Warm fleece-lined hoodie with a full zip and two pockets. Washed and ready to wear.', 400.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(34, 34, 4, NULL, 'Grey Round-Neck Sweatshirt (Size L)', 'Soft cotton blend sweatshirt, no fading or pilling. Perfect for winter mornings.', 300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(35, 35, 4, NULL, 'Navy Blue Hoodie with Front Pocket (Size XL)', 'Worn only a couple of times. Thick material that keeps you warm in hostel winters.', 450.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-30 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(36, 36, 4, NULL, 'Green Cotton Hoodie (Size S)', 'Comfortable everyday hoodie with a small mark on the sleeve that is barely visible.', 350.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(37, 37, 4, NULL, 'Running Shoes UK Size 9, Black and Orange', 'Lightweight running shoes with good grip. Used for morning jogs on campus, sole still in good shape.', 900.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(38, 38, 4, NULL, 'White Sneakers UK Size 7', 'Clean white sneakers worn only a few times. Comes with a spare set of laces.', 700.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-11-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(39, 39, 4, NULL, 'Sports Shoes UK Size 10, Blue', 'Comfortable cushioned sports shoes. Light wear on the sole, no tears.', 800.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(40, 40, 4, NULL, 'Casual Canvas Shoes UK Size 8, Red', 'Everyday canvas shoes in decent condition. Washed and sun-dried.', 450.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(41, 41, 4, NULL, 'Digital Sports Watch, Black', 'Water-resistant digital watch with stopwatch, alarm and backlight. Battery recently changed.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-21 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(42, 42, 4, NULL, 'Analog Wrist Watch with Steel Strap', 'Elegant formal watch with a scratch-free dial. Strap length can be adjusted.', 900.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-07 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(43, 43, 4, NULL, 'Smart Fitness Band with Heart Rate Monitor', 'Tracks steps, sleep and heart rate. Charger included, battery lasts about a week.', 700.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(44, 44, 4, NULL, 'Classic Leather Strap Watch, Brown', 'Simple analog watch with a genuine leather strap. Keeps good time.', 500.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-06 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(45, 45, 4, NULL, 'Denim Jacket (Size M)', 'Classic blue denim jacket in a regular fit. No tears and all buttons are intact.', 650.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-07 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(46, 46, 4, NULL, 'Black Windcheater Jacket (Size L)', 'Light windproof jacket with zip pockets. Good for rainy days and night rides.', 500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(47, 47, 4, NULL, 'Puffer Jacket for Winter, Blue (Size M)', 'Very warm quilted jacket, worn for a single winter. Zip works perfectly.', 1100.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(48, 48, 4, NULL, 'Varsity Jacket Maroon (Size S)', 'Stylish varsity jacket with contrast sleeves. Small fading near the cuffs.', 800.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-10-30 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(49, 49, 4, NULL, 'Stainless Steel Water Bottle 1 L', 'Leak-proof steel bottle with a sturdy cap. A small dent at the bottom, works perfectly.', 250.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(50, 50, 4, NULL, 'Insulated Flask 750 ml, Keeps Cold 12 Hours', 'Double-wall insulated flask for hot or cold drinks. No smell, cleaned regularly.', 400.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-16 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(51, 51, 4, NULL, 'Sipper Bottle 900 ml with Straw, Green', 'BPA-free sipper bottle with a flip straw. Great for lectures and the gym.', 150.00, 'Good', 'Active', NULL, NULL, NULL, '2026-11-09 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(52, 52, 4, NULL, 'Gym Shaker Bottle 700 ml', 'Shaker with a mixing ball and measurement marks. Cleaned and ready to use.', 120.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-14 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(53, 53, 2, NULL, '6-Socket Extension Board with Surge Protector', 'Six sockets with individual switch and 3 m cable. Ideal for hostel rooms and study desks.', 350.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-13 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(54, 54, 2, NULL, '4-Socket Extension Board, 3 Metre Cable', 'Sturdy extension board with overload protection. No burn marks, works perfectly.', 250.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-17 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(55, 55, 2, NULL, 'Multi-Plug Extension with USB Ports', 'Three sockets and two USB charging ports. Barely used.', 400.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-19 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(56, 56, 2, NULL, 'Travel Adapter with Extension Board', 'Handy adapter with multiple sockets. Light scratches but fully working.', 300.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(57, 57, 2, NULL, 'Wired Over-Ear Headphones with Mic', 'Comfortable ear cushions and clear sound. Works well for classes and calls.', 450.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-06 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(58, 26, 2, NULL, 'Wireless Bluetooth Headphones, 30 Hour Battery', 'Long battery life with deep bass and a built-in mic. Charging cable included.', 1300.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(59, 59, 2, NULL, 'Gaming Headset with Noise-Cancelling Mic', 'Adjustable headband, soft padding and a flexible mic. Works with PC and mobile.', 1100.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(60, 60, 2, NULL, 'Foldable On-Ear Headphones, Pink', 'Lightweight foldable headphones with good sound. Padding shows slight wear.', 600.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-10-16 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(61, 61, 2, NULL, 'Wireless Optical Mouse 2.4 GHz', 'Smooth tracking and quiet clicks. USB receiver and fresh battery included.', 250.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(62, 62, 2, NULL, 'Gaming Mouse with 6 Buttons and RGB', 'Adjustable DPI and colourful lighting. Barely used, no double-click issues.', 500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-09 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(63, 63, 2, NULL, 'Bluetooth Silent Click Mouse', 'Works with laptops and tablets. Silent buttons are great for the library.', 400.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(64, 64, 2, NULL, 'Wired USB Mouse, Black', 'Basic wired mouse that still works perfectly, a little worn on the surface.', 150.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-13 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(65, 65, 2, NULL, 'Wireless Keyboard and Mouse Combo', 'Slim combo with one USB receiver. Works up to 10 m. Batteries included.', 700.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(66, 66, 2, NULL, 'Full-Size USB Keyboard with Number Pad', 'Comfortable keys and a spill-resistant design. Everything works as it should.', 300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-26 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(67, 67, 2, NULL, 'Compact Bluetooth Keyboard for Tablet', 'Pairs with phones, tablets and laptops. Rechargeable with a long battery life.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(68, 68, 2, NULL, 'RGB Gaming Keyboard with Blue Switches', 'Clicky mechanical switches with multi-colour backlight. Detachable cable.', 1100.00, 'Like New', 'Sold', NULL, NULL, NULL, '2026-08-18 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(69, 69, 2, NULL, 'Power Bank 10000 mAh Fast Charging', 'Charges a phone about 2.5 times. Both USB ports and Type-C work fine.', 500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-07-28 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(70, 70, 2, NULL, 'Power Bank 20000 mAh Dual USB', 'High-capacity power bank for long days on campus. Holds charge very well.', 800.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(71, 71, 2, NULL, 'Slim Power Bank 5000 mAh', 'Pocket-sized and light. Used rarely, with an LED battery indicator.', 300.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(72, 72, 2, NULL, 'Power Bank 15000 mAh with Type-C Fast Charge', 'Supports fast charging in and out. Minor scratches on the casing.', 650.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-21 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(73, 73, 2, NULL, '10-inch Android Tablet 4GB RAM 64GB', 'Great for reading PDFs and online classes. Charger and a flip cover are included.', 6500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-23 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(74, 74, 2, NULL, '8-inch Tablet with Stylus', 'Perfect for taking handwritten notes. Screen has a guard from day one.', 4500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(75, 75, 2, NULL, 'Drawing Tablet for Notes and Design', 'Pressure-sensitive pen, works with Windows and Mac. Driver CD and cable are included.', 3500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-26 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(76, 76, 2, NULL, '7-inch Wi-Fi Tablet for Study Use', 'Simple tablet for e-books and videos. Battery lasts around 5 hours.', 2500.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-12 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(77, 77, 2, NULL, 'Portable Bluetooth Speaker, Waterproof', 'Loud and clear sound, battery lasts nearly 8 hours. Charging cable included.', 800.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-04 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(78, 78, 2, NULL, 'Mini Bluetooth Speaker with FM Radio', 'Pocket speaker with memory card slot and radio. Sound is crisp at medium volume.', 450.00, 'Used', 'Active', NULL, NULL, NULL, '2026-10-19 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(79, 79, 2, NULL, 'Party Speaker 20W with Mic Input', 'Powerful bass with an AUX and mic input. Great for hostel get-togethers.', 1500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(80, 80, 2, NULL, 'Desktop Speakers 2.0 USB', 'Compact desktop pair powered through USB. Clean stereo sound for movies and music.', 600.00, 'Good', 'Sold', NULL, NULL, NULL, '2026-08-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(81, 81, 2, NULL, 'Laptop 15.6 inch Core i3, 8GB RAM, 256GB SSD', 'Smooth for coding and assignments. Battery gives about 3 hours. Charger included.', 22000.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(82, 82, 2, NULL, 'Laptop 14 inch Ryzen 5, 16GB RAM, 512GB SSD', 'Fast machine for programming and light editing. Bought last year, with warranty remaining.', 32000.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-14 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(83, 83, 2, NULL, 'Refurbished Business Laptop Core i5, 8GB RAM', 'Sturdy business laptop with a good keyboard. New SSD installed recently.', 18000.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(84, 29, 2, NULL, 'Lightweight Laptop 13.3 inch, 8GB RAM, 256GB SSD', 'Easy to carry to class. Occasional light use, no dead pixels.', 20000.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(85, 85, 2, NULL, 'Wi-Fi Router 300 Mbps with 3 Antennas', 'Stable connection for a hostel room. Power adapter and LAN cable included.', 500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-25 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(86, 86, 2, NULL, 'Dual-Band Wi-Fi Router AC1200', 'Fast dual-band router with easy mobile app setup. Used for only a few months.', 900.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(87, 87, 2, NULL, 'Portable 4G Wi-Fi Hotspot Device', 'Works with any SIM and connects up to 10 devices. Battery lasts around 6 hours.', 1200.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(88, 88, 2, NULL, 'Wi-Fi Range Extender', 'Extends your signal to far corners. Simple plug-and-play setup.', 400.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-07-31 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(89, 89, 1, NULL, 'Engineering Drawing Board with T-Square', 'Smooth board with a sliding T-square. Used for one year of drawing practicals.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(90, 90, 1, NULL, 'Clipboard Set with A3 Sheets', 'Sturdy clipboard with 20 blank A3 sheets. Handy for sketching.', 250.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(91, 91, 1, NULL, 'Drafter Mini Set with Scale', 'Mini drafter with a scale for engineering graphics. Moves smoothly.', 350.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-31 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(92, 92, 1, NULL, 'Sketching Board A3 Size', 'Light wooden board with edge clips. Small scratches, perfectly usable.', 300.00, 'Used', 'Active', NULL, NULL, NULL, '2026-11-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(93, 93, 2, NULL, '22-inch Full HD LED Monitor', 'Bright, sharp screen with HDMI and VGA ports. No dead pixels or lines.', 3500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-02 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(94, 94, 2, NULL, '27-inch IPS Monitor 75 Hz', 'Wide viewing angles and thin bezels. Perfect for coding and design work.', 7500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-19 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(95, 95, 2, NULL, '19-inch Monitor for Basic Use', 'Reliable monitor for assignments and browsing. Stand included.', 2000.00, 'Used', 'Active', NULL, NULL, NULL, '2026-11-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(96, 96, 2, NULL, '24-inch Curved Monitor', 'Immersive curved display, good for movies and gaming. VGA and HDMI cables included.', 6000.00, 'Good', 'Sold', NULL, NULL, NULL, '2026-10-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(97, 97, 3, NULL, 'Study Chair with Cushioned Seat', 'Comfortable chair with a firm back. Wheels roll smoothly.', 1200.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-03 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(98, 98, 3, NULL, 'Gaming Chair with Lumbar Support', 'Reclining chair with adjustable armrests. Used for a few months.', 3500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-05 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(99, 99, 3, NULL, 'Plastic Armchair for Hostel Use', 'Simple lightweight chair, easy to clean. Slight colour fading.', 500.00, 'Used', 'Active', NULL, NULL, NULL, '2026-07-31 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(100, 100, 3, NULL, 'Revolving Chair, Black', 'Height-adjustable revolving chair with a padded seat. Gas lift works fine.', 1400.00, 'Good', 'Sold', NULL, NULL, NULL, '2026-10-21 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(101, 101, 3, NULL, 'Foldable Laptop Table, Adjustable Height', 'Lightweight table for bed or floor use. Folds flat for storage.', 600.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-26 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(102, 102, 3, NULL, 'Computer Desk 4 ft with Keyboard Tray', 'Solid desk with space for monitor and CPU. Assembly guide included.', 2200.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-09 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(103, 103, 3, NULL, 'Study Table with Drawer', 'Sturdy table with one lockable drawer. Minor surface scratches.', 1800.00, 'Used', 'Active', NULL, NULL, NULL, '2026-09-04 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(104, 104, 3, NULL, 'Compact Writing Desk, Walnut Finish', 'Neat desk for small rooms. Used for one semester.', 1500.00, 'Like New', 'Sold', NULL, NULL, NULL, '2026-08-16 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(105, 105, 3, NULL, 'LED Desk Lamp with Touch Dimmer', 'Three brightness levels and a flexible neck. Easy on the eyes during late-night study.', 400.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-09-28 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(106, 106, 3, NULL, 'Rechargeable Study Lamp with Clamp', 'Clamps to any desk edge. Battery lasts about 6 hours per charge.', 450.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-27 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(107, 107, 3, NULL, 'Foldable Table Lamp, Warm Light', 'Compact lamp that folds for easy carrying. Warm white light.', 300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-15 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(108, 108, 3, NULL, 'Reading Lamp with Flexible Neck', 'Bendable neck and a stable base. Bulb replaced recently.', 350.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-10-22 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(109, 109, 3, NULL, 'Wall-Mounted Floating Shelf Set of 3', 'Three shelves with screws and brackets. Great for books and decor.', 500.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(110, 110, 3, NULL, '5-Tier Book Rack, Metal Frame', 'Strong rack that holds plenty of books. Easy to disassemble for moving.', 1300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-16 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(111, 111, 3, NULL, 'Cube Storage Shelf, 6 Compartments', 'Neat cubes for books, bags and boxes. Minor edge scratches.', 1700.00, 'Good', 'Active', NULL, NULL, NULL, '2026-11-06 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(112, 112, 3, NULL, 'Desktop Organizer Shelf', 'Keeps stationery and files in order. Sturdy and compact.', 400.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-08-08 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(113, 113, 3, NULL, 'Table Fan 300 mm, Oscillating', 'Quiet motor and three speed settings. Oscillation works smoothly.', 550.00, 'Good', 'Active', NULL, NULL, NULL, '2026-10-20 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(114, 114, 3, NULL, 'Pedestal Fan 400 mm', 'Height-adjustable stand with strong airflow. Cleaned and serviced.', 1300.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-17 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(115, 115, 3, NULL, 'USB Mini Desk Fan', 'Small fan powered via USB. Quiet and great for study desks.', 200.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-10-24 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(116, 116, 3, NULL, 'Wall-Mount Fan 400 mm', 'High-speed fan with a sturdy wall bracket. Works perfectly.', 1000.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-21 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(117, 117, 3, NULL, 'Electric Kettle 1.5 L, Stainless Steel', 'Boils water in minutes with auto shut-off. Clean interior, no limescale.', 550.00, 'Good', 'Active', NULL, NULL, NULL, '2026-08-22 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(118, 118, 3, NULL, 'Mini Electric Kettle 1 L', 'Compact kettle for hostel use. Used for a few months.', 400.00, 'Like New', 'Active', NULL, NULL, NULL, '2026-08-25 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(119, 119, 3, NULL, 'Induction Cooktop 2000 W', 'Touch panel with preset cooking modes. Works with any induction-friendly pot.', 1500.00, 'Good', 'Active', NULL, NULL, NULL, '2026-09-11 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL),
+(120, 120, 3, NULL, 'Mini Rice Cooker 1.2 L', 'Cooks rice and veggies. Non-stick pot has minor wear.', 800.00, 'Used', 'Sold', NULL, NULL, NULL, '2026-09-04 10:03:39', '2026-11-18 10:03:39', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1276,6 +1328,13 @@ CREATE TABLE `remember_tokens` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `remember_tokens`
+--
+
+INSERT INTO `remember_tokens` (`remember_token_id`, `user_id`, `token_hash`, `expires_at`, `last_used_at`, `revoked_at`, `created_at`) VALUES
+(1, 122, '9e43d26fbcae8158fd82d05517b4ee38db98d3fd31b452ba75f0e68d97d7fc62', '2026-12-19 10:19:00', NULL, '2026-11-19 10:29:05', '2026-11-19 04:49:00');
+
 -- --------------------------------------------------------
 
 --
@@ -1314,14 +1373,16 @@ INSERT INTO `reports` (`report_id`, `reporter_id`, `reported_user_id`, `reported
 (7, 12, NULL, 5, 'Product', 'Fake/Misleading Listing', 'Item condition differs from photos', 'Listed as Like New but photos show visible wear around the keys.', 'Pending', NULL, NULL, '2026-11-15 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
 (8, 14, 16, NULL, 'User', 'Spam', 'Posting same message repeatedly', 'Sends the same message again and again in different chats.', 'Pending', NULL, NULL, '2026-11-16 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
 (9, 17, 4, NULL, 'User', 'Harassment', 'Pressuring me to meet at night', 'Kept insisting to meet outside campus at night even after I said no. Reported from chat #4.', 'Under Review', 9, 'Reviewing chat history. Asked reporter for more details.', '2026-11-17 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
-(10, 10, NULL, 19, 'Product', 'Prohibited Product', 'Not suitable for resale', 'Used footwear should not be listed, please check the guidelines.', 'Pending', NULL, NULL, '2026-11-17 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
+(10, 10, NULL, 19, 'Product', 'Prohibited Product', 'Not suitable for resale', 'Used footwear should not be listed, please check the guidelines.', 'Under Review', 9, NULL, '2026-11-17 09:42:56', '2026-11-18 18:57:20', NULL, NULL),
 (11, 9, NULL, 3, 'Product', 'Fake/Misleading Listing', 'Book bundle missing one item', 'Description lists 3 books but seller says only 2 are available.', 'Under Review', 1, 'Contacting seller for clarification.', '2026-11-16 09:42:56', '2026-11-18 09:42:56', NULL, NULL),
 (12, 2, 33, NULL, 'User', 'Scam/Fraud', 'Seller did not hand over the item after payment', 'Seller did not hand over the item after payment.', 'Resolved', 1, 'Permanent ban issued. Listing reassigned to an active seller.', '2026-10-18 10:03:39', '2026-11-18 10:03:39', '2026-10-19 15:33:39', NULL),
 (13, 5, 58, NULL, 'User', 'Harassment', 'Abusive messages after price negotiation', 'Abusive messages after price negotiation.', 'Resolved', 9, 'Permanent ban issued after reviewing chat screenshots.', '2026-10-22 10:03:39', '2026-11-18 10:03:39', '2026-10-23 15:33:39', NULL),
 (14, 8, 84, NULL, 'User', 'Scam/Fraud', 'Fake product photos used in listing', 'Fake product photos used in listing.', 'Resolved', 1, 'Permanent ban. Listing reassigned.', '2026-10-26 10:03:39', '2026-11-18 10:03:39', '2026-10-27 15:33:39', NULL),
 (15, 3, 41, NULL, 'User', 'Spam', 'Posting the same promotion in many chats', 'Posting the same promotion in many chats.', 'Resolved', 9, 'Account suspended for 10 days.', '2026-11-09 10:03:39', '2026-11-18 10:03:39', '2026-11-10 15:33:39', NULL),
 (16, 6, 67, NULL, 'User', 'Inappropriate Behavior', 'Rude replies and name calling', 'Rude replies and name calling.', 'Resolved', 1, 'Account suspended for 7 days.', '2026-11-13 10:03:39', '2026-11-18 10:03:39', '2026-11-14 15:33:39', NULL),
-(17, 9, 92, NULL, 'User', 'Harassment', 'Repeated unwanted messages', 'Repeated unwanted messages.', 'Resolved', 9, 'Account suspended for 14 days.', '2026-11-07 10:03:39', '2026-11-18 10:03:39', '2026-11-08 15:33:39', NULL);
+(17, 9, 92, NULL, 'User', 'Harassment', 'Repeated unwanted messages', 'Repeated unwanted messages.', 'Resolved', 9, 'Account suspended for 14 days.', '2026-11-07 10:03:39', '2026-11-18 10:03:39', '2026-11-08 15:33:39', NULL),
+(18, 1, 51, 51, 'Product', 'Prohibited Product', 'Bad', 'very bad', 'Pending', NULL, NULL, '2026-11-18 18:51:06', '2026-11-18 18:51:06', NULL, NULL),
+(19, 1, 111, 111, 'Product', 'Prohibited Product', 'Fake or misleading photos', 'vaey bad', 'Pending', NULL, NULL, '2026-11-18 18:56:08', '2026-11-18 18:56:08', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1351,7 +1412,9 @@ INSERT INTO `report_evidence` (`evidence_id`, `report_id`, `file_path`, `file_na
 (4, 3, 'cx_r03_1.jpg', 'spam_links.jpg', 'image/jpeg', 0, '2026-11-06 09:42:56', NULL),
 (5, 7, 'cx_r07_1.jpg', 'key_wear_photo.jpg', 'image/jpeg', 0, '2026-11-15 09:42:56', NULL),
 (6, 9, 'cx_r09_1.jpg', 'chat_screenshot.jpg', 'image/jpeg', 0, '2026-11-17 09:42:56', NULL),
-(7, 11, 'cx_r11_1.jpg', 'seller_reply.jpg', 'image/jpeg', 0, '2026-11-16 09:42:56', NULL);
+(7, 11, 'cx_r11_1.jpg', 'seller_reply.jpg', 'image/jpeg', 0, '2026-11-16 09:42:56', NULL),
+(8, 18, 'b78c840744923e36bf3ec005.png', 'Screenshot 2026-11-19 001616.png', 'image', 190462, '2026-11-18 18:51:06', NULL),
+(9, 19, 'd3287b40342afc8f3fd07301.png', 'Screenshot 2026-11-19 001616.png', 'image', 190462, '2026-11-18 18:56:08', NULL);
 
 -- --------------------------------------------------------
 
@@ -1641,7 +1704,8 @@ INSERT INTO `users` (`user_id`, `full_name`, `email`, `pending_email`, `phone`, 
 (117, 'Prof. Utkarsh Purohit', 'utkarsh.purohit@campusxchange.test', NULL, '9826000217', 'Faculty', '$2y$12$mavEWc7VL5pBrrE/l5AjvewYnSYIxpSn8shvTBpiiJZJ/DQhn7viO', '2026-08-21 15:33:39', 'Active', 1, '2026-08-20 10:03:39', '2026-09-09 10:03:39', NULL),
 (118, 'Prof. Vaibhav Kushwah', 'vaibhav.kushwah@campusxchange.test', NULL, '9826000218', 'Faculty', '$2y$12$mavEWc7VL5pBrrE/l5AjvewYnSYIxpSn8shvTBpiiJZJ/DQhn7viO', '2026-08-24 15:33:39', 'Active', 1, '2026-08-23 10:03:39', '2026-09-12 10:03:39', NULL),
 (119, 'Prof. Yash Upadhyay', 'yash.upadhyay@campusxchange.test', NULL, '9826000219', 'Faculty', '$2y$12$mavEWc7VL5pBrrE/l5AjvewYnSYIxpSn8shvTBpiiJZJ/DQhn7viO', '2026-09-10 15:33:39', 'Active', 1, '2026-09-09 10:03:39', '2026-09-29 10:03:39', NULL),
-(120, 'Dr. Zoya Jha', 'zoya.jha@campusxchange.test', NULL, '9826000220', 'Faculty', '$2y$12$mavEWc7VL5pBrrE/l5AjvewYnSYIxpSn8shvTBpiiJZJ/DQhn7viO', '2026-09-03 15:33:39', 'Active', 1, '2026-09-02 10:03:39', '2026-09-22 10:03:39', NULL);
+(120, 'Dr. Zoya Jha', 'zoya.jha@campusxchange.test', NULL, '9826000220', 'Faculty', '$2y$12$mavEWc7VL5pBrrE/l5AjvewYnSYIxpSn8shvTBpiiJZJ/DQhn7viO', '2026-09-03 15:33:39', 'Active', 1, '2026-09-02 10:03:39', '2026-09-22 10:03:39', NULL),
+(122, 'Anuj Kushwaha', 'nikhilr@gmail.com', NULL, '7084771753', 'Student', '$2y$10$Oxnfr/wfsoCUQhjIj2J40evT.OPdTP7nTu5u256HtaKHs0JP6zQFS', '2026-11-19 10:18:46', 'Active', 1, '2026-11-19 04:48:06', '2026-11-21 18:15:03', NULL);
 
 -- --------------------------------------------------------
 
@@ -1703,7 +1767,8 @@ CREATE TABLE `user_presence` (
 --
 
 INSERT INTO `user_presence` (`presence_id`, `user_id`, `last_seen_at`, `updated_at`) VALUES
-(25, 1, '2026-11-18 15:23:15', '2026-11-18 09:54:15');
+(25, 1, '2026-11-19 10:37:10', '2026-11-19 05:08:10'),
+(409, 122, '2026-11-21 23:45:45', '2026-11-21 18:15:45');
 
 -- --------------------------------------------------------
 
@@ -1859,7 +1924,8 @@ INSERT INTO `user_profiles` (`profile_id`, `user_id`, `profile_picture`, `phone`
 (117, 117, 'cx_u117.jpg', '9826000217', 'Computer Applications', 'Assistant Professor', NULL, NULL, 'Clearing out things before the semester ends.', 'Faculty Residence Block 4', 'ITM University Gwalior', NULL, 'Faculty Residence Block 4', 'Gwalior', 'Madhya Pradesh', '475001', NULL, 100, 'Complete', '2026-08-20 10:03:39', '2026-11-18 10:03:39'),
 (118, 118, 'cx_u118.jpg', '9826000218', 'Computer Science & Engineering', 'Professor', NULL, NULL, 'Loves sports and the outdoors. Meet me at the ground gate.', 'Faculty Residence Block 3', 'ITM University Gwalior', NULL, 'Faculty Residence Block 3', 'Gwalior', 'Madhya Pradesh', '475001', NULL, 100, 'Complete', '2026-08-23 10:03:39', '2026-11-18 10:03:39'),
 (119, 119, 'cx_u119.jpg', '9826000219', 'Civil Engineering', 'Professor', NULL, NULL, 'Decluttering my hostel room, fair prices only.', 'Faculty Residence Block 4', 'ITM University Gwalior', NULL, 'Faculty Residence Block 4', 'Gwalior', 'Madhya Pradesh', '475001', NULL, 100, 'Complete', '2026-09-09 10:03:39', '2026-11-18 10:03:39'),
-(120, 120, 'cx_u120.jpg', '9826000220', 'Civil Engineering', 'Lecturer', NULL, NULL, 'Quiet hostel resident, easy to coordinate with.', 'Faculty Residence Block 1', 'ITM University Gwalior', NULL, 'Faculty Residence Block 1', 'Gwalior', 'Madhya Pradesh', '475001', NULL, 100, 'Complete', '2026-09-02 10:03:39', '2026-11-18 10:03:39');
+(120, 120, 'cx_u120.jpg', '9826000220', 'Civil Engineering', 'Lecturer', NULL, NULL, 'Quiet hostel resident, easy to coordinate with.', 'Faculty Residence Block 1', 'ITM University Gwalior', NULL, 'Faculty Residence Block 1', 'Gwalior', 'Madhya Pradesh', '475001', NULL, 100, 'Complete', '2026-09-02 10:03:39', '2026-11-18 10:03:39'),
+(144, 122, NULL, '7084771753', NULL, 'MCA', NULL, NULL, NULL, 'Orai, Uttar Pradesh', 'Itm University', '2027', '3375, Shivpuri Patel Nagar', 'Orai', 'Uttar Pradesh', '285001', 'abda75045a5ea9e92abd3220.jpg', 100, 'Complete', '2026-11-19 04:48:06', '2026-11-21 17:31:05');
 
 -- --------------------------------------------------------
 
@@ -2008,7 +2074,8 @@ INSERT INTO `user_verification` (`verification_id`, `user_id`, `id_type`, `id_nu
 (117, 117, 'Faculty ID', 'FAC-CA-0196', 'cx_v117_front.jpg', 'cx_v117_back.jpg', 'Approved', '2026-08-21 15:33:39', 1, '2026-08-22 15:33:39', NULL, '2026-11-18 10:03:39', '2026-11-18 10:03:39', NULL),
 (118, 118, 'Faculty ID', 'FAC-CS-0197', 'cx_v118_front.jpg', 'cx_v118_back.jpg', 'Approved', '2026-08-24 15:33:39', 9, '2026-08-25 15:33:39', NULL, '2026-11-18 10:03:39', '2026-11-18 10:03:39', NULL),
 (119, 119, 'Faculty ID', 'FAC-CE-0198', 'cx_v119_front.jpg', 'cx_v119_back.jpg', 'Approved', '2026-09-10 15:33:39', 1, '2026-09-11 15:33:39', NULL, '2026-11-18 10:03:39', '2026-11-18 10:03:39', NULL),
-(120, 120, 'Faculty ID', 'FAC-CE-0199', 'cx_v120_front.jpg', 'cx_v120_back.jpg', 'Approved', '2026-09-03 15:33:39', 9, '2026-09-04 15:33:39', NULL, '2026-11-18 10:03:39', '2026-11-18 10:03:39', NULL);
+(120, 120, 'Faculty ID', 'FAC-CE-0199', 'cx_v120_front.jpg', 'cx_v120_back.jpg', 'Approved', '2026-09-03 15:33:39', 9, '2026-09-04 15:33:39', NULL, '2026-11-18 10:03:39', '2026-11-18 10:03:39', NULL),
+(121, 122, 'Student ID', 'MCAN1CA25038', '7cff65006ac2790d31c2bf4f.jpg', '19f19938fcbc988bda76826e.jpg', 'Approved', '2026-11-21 23:01:15', 9, '2026-11-21 23:02:02', NULL, '2026-11-19 04:52:57', '2026-11-21 17:32:02', NULL);
 
 -- --------------------------------------------------------
 
@@ -2376,13 +2443,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `admin_email_verification_tokens`
 --
 ALTER TABLE `admin_email_verification_tokens`
-  MODIFY `verification_token_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `verification_token_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `admin_logs`
 --
 ALTER TABLE `admin_logs`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
 
 --
 -- AUTO_INCREMENT for table `admin_password_reset_tokens`
@@ -2400,7 +2467,7 @@ ALTER TABLE `admin_profiles`
 -- AUTO_INCREMENT for table `admin_restrictions`
 --
 ALTER TABLE `admin_restrictions`
-  MODIFY `restriction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `restriction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -2418,13 +2485,13 @@ ALTER TABLE `chats`
 -- AUTO_INCREMENT for table `email_verification_tokens`
 --
 ALTER TABLE `email_verification_tokens`
-  MODIFY `verification_token_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `verification_token_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `login_security_activity`
 --
 ALTER TABLE `login_security_activity`
-  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `messages`
@@ -2436,7 +2503,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
 
 --
 -- AUTO_INCREMENT for table `password_reset_tokens`
@@ -2466,19 +2533,19 @@ ALTER TABLE `product_reviews`
 -- AUTO_INCREMENT for table `remember_tokens`
 --
 ALTER TABLE `remember_tokens`
-  MODIFY `remember_token_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `remember_token_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `report_evidence`
 --
 ALTER TABLE `report_evidence`
-  MODIFY `evidence_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `evidence_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `security_questions`
@@ -2496,7 +2563,7 @@ ALTER TABLE `seller_reviews`
 -- AUTO_INCREMENT for table `system_settings`
 --
 ALTER TABLE `system_settings`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT for table `transactions`
@@ -2508,7 +2575,7 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 
 --
 -- AUTO_INCREMENT for table `user_bans`
@@ -2520,19 +2587,19 @@ ALTER TABLE `user_bans`
 -- AUTO_INCREMENT for table `user_presence`
 --
 ALTER TABLE `user_presence`
-  MODIFY `presence_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `presence_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=652;
 
 --
 -- AUTO_INCREMENT for table `user_profiles`
 --
 ALTER TABLE `user_profiles`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
 
 --
 -- AUTO_INCREMENT for table `user_verification`
 --
 ALTER TABLE `user_verification`
-  MODIFY `verification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+  MODIFY `verification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
 
 --
 -- AUTO_INCREMENT for table `wishlist`

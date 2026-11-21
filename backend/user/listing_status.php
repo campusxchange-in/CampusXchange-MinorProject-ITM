@@ -16,7 +16,7 @@ if ($productId <= 0 || !in_array($action, ['publish', 'hide', 'activate'], true)
 $p = cx_fetch_one(
     $conn,
     "SELECT p.product_id, p.title, p.price, p.category_id, p.product_condition,
-            p.status, p.invoice_document, c.invoice_required,
+            p.status, p.invoice_document, p.product_box_image, p.product_type, c.invoice_required,
             (SELECT COUNT(*) FROM Product_Images pi
               WHERE pi.product_id = p.product_id AND pi.deleted_at IS NULL) AS image_count
      FROM Products p
@@ -46,8 +46,13 @@ if ($action === 'hide') {
     ) {
         cx_json_response(false, 'Complete the title, price, category, condition and add at least one image first.', [], 422);
     }
-    if ((int)$p['invoice_required'] === 1 && empty($p['invoice_document'])) {
+    $needsDocs = (int)$p['invoice_required'] === 1
+        && in_array((string)$p['product_type'], ['Mobile', 'Laptop', 'Tablet', 'Smartwatch', 'Headphones'], true);
+    if ($needsDocs && empty($p['invoice_document'])) {
         cx_json_response(false, 'This category requires an invoice document.', [], 422);
+    }
+    if ($needsDocs && empty($p['product_box_image'])) {
+        cx_json_response(false, 'This category requires a photo of the original product box.', [], 422);
     }
     $new = 'Active';
 }

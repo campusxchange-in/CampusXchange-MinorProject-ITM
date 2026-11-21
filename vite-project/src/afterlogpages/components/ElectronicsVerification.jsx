@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   FaShieldAlt,
   FaFileInvoice,
@@ -15,6 +15,11 @@ const ElectronicsVerification = ({
   onBillChange,
   onBoxImageChange,
 }) => {
+  const boxPreviewUrl = useMemo(
+    () => (boxImage ? URL.createObjectURL(boxImage) : null),
+    [boxImage]
+  );
+
   return (
     <div className="electronics-verification">
 
@@ -26,7 +31,7 @@ const ElectronicsVerification = ({
         </div>
 
         <div>
-          <h3>Electronics Verification</h3>
+          <h3>Purchase Verification</h3>
 
           <p>
             Upload your purchase bill and original product box
@@ -153,7 +158,7 @@ const ElectronicsVerification = ({
           <div className="box-image-preview">
 
             <img
-              src={URL.createObjectURL(boxImage)}
+              src={boxPreviewUrl}
               alt="Product box"
             />
 

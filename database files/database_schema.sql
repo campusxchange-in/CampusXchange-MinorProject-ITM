@@ -386,6 +386,8 @@ CREATE TABLE Products (
     seller_id INT NOT NULL,
     category_id INT NULL,
 
+    product_type VARCHAR(50) NULL,
+
     title VARCHAR(150) NULL,
     description TEXT NULL,
 
@@ -399,6 +401,8 @@ CREATE TABLE Products (
     ) NULL,
 
     invoice_document VARCHAR(255) NULL,
+
+    product_box_image VARCHAR(255) NULL,
 
     status ENUM(
         'Draft',
